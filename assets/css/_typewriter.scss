@@ -11,19 +11,30 @@
     color: darkblue;
     text-decoration: underline;
     &:hover {
-      color: darken(darkblue, 30%);
+      color: darken(darkblue, 10%);
+      background: rgba(yellow, .1);
     }
   }
+}
+
+.typewriter__prefill {
+  font-family: $fontPrimary;
+  color: $colorSheetText;
+  position: relative;
+  top: -2px;
+  display: inline-block;
 }
 
 ul.typewriter {
   list-style: none;
   margin-left: 0;
   li {
-    margin-left: 0;
+    margin-left: $baseUnit;
+    position: relative;
   }
   li:before {
-
+    position: absolute;
+    left: -$baseUnit;
     content: '—';
     margin-right: $baseUnit/2;
   }
