@@ -5,6 +5,16 @@
   }
 }
 
+.constrain--hero {
+  padding: 0 $baseUnit;
+  @include media($breakLaptop) {
+    padding: 0 $baseUnit*2;
+  }
+  @include media($breakDesktopWide) {
+    padding: 0 $baseUnit*6;
+  }
+}
+
 .constrain--text {
   margin: 0;
   padding: 0;
