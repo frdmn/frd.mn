@@ -18,6 +18,14 @@ $navObject: true;
 $gridObject: true;
 $constrainObject: true;
 
+/* fonts & font sizes */
+
+$fontPrimary: "futura-pt", "Helvetica Neue", sans-serif;
+$fontSecondary: "letter-gothic-std", monospace;
+
+$baseFontSize: 16px;
+$baseLineHeight: 24px;
+
 /**
  * basicss import
  */
@@ -29,3 +37,5 @@ $constrainObject: true;
  *
  * e.g. @import 'nav';
  */
+
+@import 'typo';
