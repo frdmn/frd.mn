@@ -1,0 +1,28 @@
+.labeled-text {
+  position: relative;
+  margin-bottom: $baseUnit;
+  overflow: hidden;
+  &__label-wrap {
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__label {
+    @include font-size(14px);
+    display: inline-block;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      background: #dac9b7;
+      top: 50%;
+      height: 2px;
+      display: inline-block;
+      width: 1200px;
+      margin-left: 10px;
+      margin-top: 1px;
+    }
+  }
+}

@@ -6,7 +6,10 @@
   text-transform: uppercase;
 }
 
-/* .headline-wrap is used to wrap headlines with 'background-border' */
+/**
+ * .headline-wrap is used to wrap headlines with
+ * 'background-border', such as '.headline--wavy'
+ */
 
 .headline-wrap {
   overflow: hidden;
