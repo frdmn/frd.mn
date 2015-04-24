@@ -10,5 +10,7 @@ assets/js/modernizr.js
 assets/js/build.js
 assets/icons/grunticon
 
+data/github.json
+
 .dashbrew
 .env
