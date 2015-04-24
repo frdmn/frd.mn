@@ -96,7 +96,7 @@
             <p class="typewriter space--bottom-none"><?php echo explode("-", $project['date'])[0]; ?><span class="typewriter__prefill">—</span><?php echo explode("-", $project['date'])[1]; ?><span class="typewriter__prefill">—</span><?php echo explode("-", $project['date'])[2]; ?></p>
           </div>
           <div class="project-table__title">
-            <p class="typewriter space--bottom-none"><a href="project.php?alias=<?php echo $project['alias']; ?>"><?php echo $project['name']; ?></a></p>
+            <p class="typewriter space--bottom-none"><a href="<?php echo $project['alias']; ?>.html"><?php echo $project['name']; ?></a></p>
           </div>
           <div class="project-table__category">
             <p class="typewriter space--bottom-none"><?php echo $project['category']; ?></p>

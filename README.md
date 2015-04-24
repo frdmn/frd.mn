@@ -18,9 +18,17 @@ $ curl -sS https://getcomposer.org/installer | php
 $ mv composer.phar /usr/local/bin
 ```
 
+## Pretty URLs / rewrites
+
+The project contains a `.htaccess` file in case you run Apache with enabled `AllowOverride`. In case you run Nginx you can use the following rewrite directive for your server block configuration:
+
+```
+rewrite ^(.*)\.html$ /project.php?alias=$1;
+```
+
 ## Todo:
 
-- [X] github.json schema festlegen (infos unterseite: stars, forks, language, language detail)
-- [X] github.json per script aufbauen (anhand vom projects array [info.json])
-- pretty urls: /alias.html statt /project.php?alias=$alias
+- ~~github.json schema festlegen (infos unterseite: stars, forks, language, language detail)~~
+- ~~github.json per script aufbauen (anhand vom projects array [info.json])~~
+- ~~pretty urls: /alias.html statt /project.php?alias=$alias~~
 - imprint?
