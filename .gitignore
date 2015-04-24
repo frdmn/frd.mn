@@ -11,3 +11,4 @@ assets/js/build.js
 assets/icons/grunticon
 
 .dashbrew
+.env
