@@ -14,8 +14,9 @@
   // Authenticate using API token in .env
   $client->authenticate(getenv('GITHUB_API_TOKEN'), null, Github\Client::AUTH_HTTP_TOKEN);
 
-  $repositories = $client->api('user')->repositories($githubUsername);
   // Fetch all repositories
+  $paginator  = new Github\ResultPager($client);
+  $repositories     = $paginator->fetchAll($client->api('user'), 'repositories', array($githubUsername));
 
   var_dump($repositories);
 ?>
