@@ -1,0 +1,6 @@
+.typewriter {
+  font-family: $fontSecondary;
+  text-transform: uppercase;
+  color: darkblue;
+  @include font-size(24px);
+}
