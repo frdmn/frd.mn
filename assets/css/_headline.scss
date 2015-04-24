@@ -6,6 +6,11 @@
   text-transform: uppercase;
 }
 
+.headline--label {
+  @include font-size(14px);
+}
+
+
 /**
  * .headline-wrap is used to wrap headlines with
  * 'background-border', such as '.headline--wavy'

@@ -35,8 +35,17 @@ $headingSize6: 18px;
 
 /* colors */
 
+$colorDark: #3F2613;
+
 $colorText: #000;
-$colorSheetText:  #3F2613;
+$colorSheetText:  $colorDark;
+
+$colorSheetBackgroundBase: #EBDECC;
+
+$colorBorderDark: $colorDark;
+$colorBorderLight: #d9c9b7;
+
+
 
 /* constrains */
 
@@ -66,3 +75,4 @@ $constrainMax:     1200px!default;
 @import 'text-group';
 @import 'labeled-text';
 @import 'typewriter';
+@import 'project-table';
