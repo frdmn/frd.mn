@@ -67,6 +67,7 @@ $constrainMax:     1300px!default;
  */
 
 @import 'constrain';
+@import 'nav';
 
 @import 'typo';
 @import 'base';
@@ -78,3 +79,4 @@ $constrainMax:     1300px!default;
 @import 'project-table';
 @import 'project-image';
 @import 'fading-seperator';
+@import 'site-footer';

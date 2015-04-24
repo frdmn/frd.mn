@@ -1,0 +1,16 @@
+.site-footer {
+  padding-top: $baseUnit*4;
+  text-align: center;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    height: $baseUnit;
+    background-repeat: repeat-x !important;
+    background-position: center left;
+  }
+}

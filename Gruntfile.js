@@ -126,7 +126,7 @@ module.exports = function(grunt) {
                     cssprefix: ".icon--",
                     customselectors: {
                       "*": [".icon--$1:before"],
-                      "waves": [".headline--wavy:after"]
+                      "waves": [".headline--wavy:after",".site-footer:before"]
                     }
                 }
             }

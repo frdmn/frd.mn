@@ -1,0 +1,16 @@
+.nav--slash {
+  @include font-size(18px);
+  text-transform: uppercase;
+  margin-bottom: 0;
+  a {
+    color: $colorSheetText;
+  }
+  > li {
+    &:before {
+        content: "/" "\00A0";
+    }
+    &:first-child:before{
+      display: none;
+    }
+  }
+}
