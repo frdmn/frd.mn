@@ -1,5 +1,8 @@
 .constrain {
-  padding: 0 $baseUnit*2;
+  padding: 0 $baseUnit;
+  @include media($breakLaptop) {
+    padding: 0 $baseUnit*2;
+  }
 }
 
 .constrain--text {

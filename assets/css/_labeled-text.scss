@@ -29,7 +29,6 @@
 
 .labeled-text-hero {
   position: relative;
-//  margin-bottom: $baseUnit;
 
   &__label {
     @include font-size(12px, false);
@@ -39,7 +38,8 @@
   }
   p {
     @include font-size(24px);
-    @include media($breakLaptop) {
+    line-height: 1.5;
+    @include media($breakDesktop) {
       @include font-size(36px);
     }
     color: #fff;
