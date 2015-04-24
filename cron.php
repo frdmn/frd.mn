@@ -9,6 +9,8 @@
 
   $client = new \Github\Client();
 
+  $client->authenticate(getenv('GITHUB_API_TOKEN'), null, Github\Client::AUTH_HTTP_TOKEN);
+
   $repositories = $client->api('user')->repositories($githubUsername);
 
   var_dump($repositories);
