@@ -3,7 +3,7 @@
   require_once 'vendor/autoload.php';
 
   // Load .env file
-  Dotenv::load('.env');
+  Dotenv::load(__DIR__);
 
   $githubUsername = 'frdmn';
 
