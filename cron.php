@@ -18,5 +18,8 @@
   $paginator  = new Github\ResultPager($client);
   $repositories     = $paginator->fetchAll($client->api('user'), 'repositories', array($githubUsername));
 
-  var_dump($repositories);
+  // Dump if /?dump is set
+  if (isset($_GET['dump'])) {
+    var_dump($repositories);
+  }
 ?>
