@@ -26,6 +26,13 @@ $fontSecondary: "letter-gothic-std", monospace;
 $baseFontSize: 16px;
 $baseLineHeight: 24px;
 
+$headingSize1: 72px;
+$headingSize2: 48px;
+$headingSize3: 36px;
+$headingSize4: 32px;
+$headingSize5: 24px;
+$headingSize6: 18px;
+
 /**
  * basicss import
  */
@@ -41,3 +48,4 @@ $baseLineHeight: 24px;
 @import 'typo';
 @import 'base';
 @import 'sheet';
+@import 'headline';
