@@ -38,6 +38,13 @@ $headingSize6: 18px;
 $colorText: #000;
 $colorSheetText:  #3F2613;
 
+/* constrains */
+
+$constrainSmall:   380px!default;
+$constrainMedium:  480px!default;
+$constrainLarge:   720px!default;
+$constrainMax:     1200px!default;
+
 /**
  * basicss import
  */
@@ -50,9 +57,12 @@ $colorSheetText:  #3F2613;
  * e.g. @import 'nav';
  */
 
+@import 'constrain';
+
 @import 'typo';
 @import 'base';
 @import 'sheet';
 @import 'headline';
+@import 'text-group';
 @import 'labeled-text';
 @import 'typewriter';
