@@ -5,6 +5,15 @@
   // Load .env file
   Dotenv::load(__DIR__);
 
+  // Function to calculate the percentage
+  function percent($amount, $total) {
+    $countA = $amount / $total;
+    $countB = $countA * 100;
+    // Round number
+    $count = number_format($countB, 0);
+    return $count;
+  }
+
   // Store GitHub username to work with
   $githubUsername = 'frdmn';
 
@@ -30,6 +39,12 @@
     $json_prepare['projects'][$repository['name']]['language'] = $repository['language'];
     $json_prepare['projects'][$repository['name']]['created'] = $repository['created_at'];
     $json_prepare['projects'][$repository['name']]['updated'] = $repository['updated_at'];
+
+    // Languages
+    $languages = $client->api('repo')->languages($githubUsername, $repository['name']);
+    foreach ($languages as $language => $size) {
+      $json_prepare['projects'][$repository['name']]['languages'][$language] = percent($size, array_sum($languages));
+    }
   }
 
   // Encode as JSON and print
