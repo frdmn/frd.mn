@@ -5,13 +5,17 @@
   // Load .env file
   Dotenv::load(__DIR__);
 
+  // Store GitHub username to work with
   $githubUsername = 'frdmn';
 
+  // Initiate API client
   $client = new \Github\Client();
 
+  // Authenticate using API token in .env
   $client->authenticate(getenv('GITHUB_API_TOKEN'), null, Github\Client::AUTH_HTTP_TOKEN);
 
   $repositories = $client->api('user')->repositories($githubUsername);
+  // Fetch all repositories
 
   var_dump($repositories);
 ?>
