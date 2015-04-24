@@ -26,3 +26,23 @@
     }
   }
 }
+
+.labeled-text-hero {
+  position: relative;
+//  margin-bottom: $baseUnit;
+
+  &__label {
+    @include font-size(12px, false);
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #666;
+  }
+  p {
+    @include font-size(24px);
+    @include media($breakLaptop) {
+      @include font-size(36px);
+    }
+    color: #fff;
+    margin-top: -$baseUnit/4;
+  }
+}

@@ -1,5 +1,6 @@
 .sheet {
   margin-top: $baseUnit*2;
+  margin-bottom: $baseUnit*2;
   padding: $baseUnit*4 $baseUnit*2;
   @include media($breakDesktopWide) {
     padding: $baseUnit*4 $baseUnit*4;
