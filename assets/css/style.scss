@@ -38,6 +38,7 @@ $headingSize6: 18px;
 $colorDark: #3F2613;
 
 $colorText: #000;
+$colorGreyText: #666;
 $colorSheetText:  $colorDark;
 
 $colorSheetBackgroundBase: #EBDECC;
@@ -80,3 +81,4 @@ $constrainMax:     1300px!default;
 @import 'project-image';
 @import 'fading-seperator';
 @import 'site-footer';
+@import 'copyright';

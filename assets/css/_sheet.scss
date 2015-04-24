@@ -3,7 +3,7 @@
   margin-bottom: $baseUnit*2;
   padding: $baseUnit*2 $baseUnit;
   @include media($breakLaptop) {
-    padding: $baseUnit*4 $baseUnit*2;
+    padding: $baseUnit*3 $baseUnit*2;
   }
   @include media($breakDesktopWide) {
     padding: $baseUnit*4 $baseUnit*4;

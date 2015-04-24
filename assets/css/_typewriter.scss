@@ -2,9 +2,10 @@
   font-family: $fontSecondary;
   text-transform: uppercase;
   color: darkblue;
-  @include font-size(18px);
+  @include font-size(18px,false);
+  line-height: 1.25;
   @include media($breakTablet) {
-    @include font-size(24px);
+    @include font-size(24px,false);
   }
   a {
     color: darkblue;

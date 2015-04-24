@@ -34,7 +34,7 @@
     @include font-size(12px, false);
     line-height: 1.5;
     text-transform: uppercase;
-    color: #666;
+    color: $colorGreyText;
   }
   p {
     @include font-size(24px);
