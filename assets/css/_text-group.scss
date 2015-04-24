@@ -1,0 +1,14 @@
+.text-group {
+  border: 2px solid $colorSheetText;
+  margin-top: $baseUnit/2;
+  //margin-bottom: -2px;
+  padding: $baseUnit;
+  &__headline {
+    margin-top: -2px - $baseUnit*1.5;
+    &-inner {
+      background: #EBDECC;
+      padding: 0 $baseUnit/4;
+      margin-left: -$baseUnit/4;
+    }
+  }
+}
