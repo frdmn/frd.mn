@@ -18,6 +18,24 @@
   $paginator  = new Github\ResultPager($client);
   $repositories     = $paginator->fetchAll($client->api('user'), 'repositories', array($githubUsername));
 
+  // Loop through repos
+  foreach ($repositories as $repository) {
+    // Store informations in temporary object
+    $json_prepare['projects'][$repository['name']]['name'] = $repository['name'];
+    $json_prepare['projects'][$repository['name']]['description'] = $repository['description'];
+    $json_prepare['projects'][$repository['name']]['github'] = $repository['full_name'];
+    $json_prepare['projects'][$repository['name']]['stars'] = $repository['stargazers_count'];
+    $json_prepare['projects'][$repository['name']]['watcher'] = $repository['watchers_count'];
+    $json_prepare['projects'][$repository['name']]['forks'] = $repository['forks'];
+    $json_prepare['projects'][$repository['name']]['language'] = $repository['language'];
+    $json_prepare['projects'][$repository['name']]['created'] = $repository['created_at'];
+    $json_prepare['projects'][$repository['name']]['updated'] = $repository['updated_at'];
+  }
+
+  // Encode as JSON and print
+  $json = json_encode($json_prepare);
+  echo $json;
+
   // Dump if /?dump is set
   if (isset($_GET['dump'])) {
     var_dump($repositories);
