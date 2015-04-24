@@ -5,3 +5,27 @@
 .headline--upper {
   text-transform: uppercase;
 }
+
+/* .headline-wrap is used to wrap headlines with 'background-border' */
+
+.headline-wrap {
+  overflow: hidden;
+}
+
+/* .headline--wavy: headline with wavy background */
+
+.headline--wavy {
+  display: inline-block;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    background-position: center left;
+    background-repeat: repeat-x !important;
+    top: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 1200px;
+    margin-left: 10px;
+  }
+}
