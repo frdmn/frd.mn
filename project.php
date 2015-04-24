@@ -128,7 +128,7 @@
     <h2 class="headline headline--upper heading-6 space--top-double">
       <span class="text-group__headline-inner">Additional Info:</span>
     </h2>
-    <?php if ($projects[$alias]['additional']['information']): ?>
+    <?php if (isset($projects[$alias]['additional']['information'])): ?>
       <div class="labeled-text">
         <div class="labeled-text__label-wrap">
           <span class="labeled-text__label">Detailed Information</span>
@@ -138,7 +138,7 @@
         </p>
       </div>
     <?php endif; ?>
-    <?php if ($projects[$alias]['additional']['libraries']): ?>
+    <?php if (isset($projects[$alias]['additional']['libraries'])): ?>
       <div class="labeled-text">
         <div class="labeled-text__label-wrap">
           <span class="labeled-text__label">Libraries</span>
@@ -150,7 +150,7 @@
         </ul>
       </div>
     <?php endif; ?>
-    <?php if ($projects[$alias]['additional']['dependencies']): ?>
+    <?php if (isset($projects[$alias]['additional']['dependencies'])): ?>
       <div class="labeled-text">
         <div class="labeled-text__label-wrap">
           <span class="labeled-text__label">Dependencies</span>
