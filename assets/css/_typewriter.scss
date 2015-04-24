@@ -11,3 +11,16 @@
     }
   }
 }
+
+ul.typewriter {
+  list-style: none;
+  margin-left: 0;
+  li {
+    margin-left: 0;
+  }
+  li:before {
+
+    content: '—';
+    margin-right: $baseUnit/2;
+  }
+}
