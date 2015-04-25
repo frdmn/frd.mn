@@ -282,6 +282,27 @@
           }
         ]
       }
+    },
+    "GiraHelper": {
+      "name": "GiraHelper",
+      "alias": "GiraHelper",
+      "category": "scripts",
+      "date": "2013-05-08",
+      "description": "Bash script to control the lights in my office",
+      "github": "https://github.com/frdmn/GiraHelper",
+      "additional": {
+        "information": "Dead simple Bash script to talk to a Gira home server.",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "Gira Home server"
+          },
+          {
+            "name": "terminal-notifier",
+            "link": "https://github.com/alloy/terminal-notifier"
+          }
+        ]
+      }
     }
   }
 }
