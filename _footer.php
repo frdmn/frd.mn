@@ -1,7 +1,6 @@
         <footer class="site-footer">
           <ul class="nav nav--slash">
             <li><a href="<?php echo $info['contact']['mail']['link']; ?>">Contact</a></li>
-            <li><a href="#">Imprint</a></li>
           </ul>
         </footer>
       </div>
