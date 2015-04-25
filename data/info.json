@@ -38,10 +38,7 @@
       "description": "Simple bork-based dotfile setup for both OS X and Linux systems.",
       "github": "https://github.com/frdmn/dotfiles",
       "additional": {
-        "information": "this is optional and could be quite a bit of text \n
-* this is optional and could be quite a bit of text \n
-* this is optional and could be quite a bit of text \n
-this is optional and could be quite a bit of text \n",
+        "information": "this is optional and could be quite a bit of text \n* this is optional and could be quite a bit of text \n* this is optional and could be quite a bit of text \nthis is optional and could be quite a bit of text \n",
         "libraries": [
           {
             "name": "Bork",
@@ -141,10 +138,7 @@ this is optional and could be quite a bit of text \n",
       "description": "Bash scripts to analyze, troubleshoot and inspect SSL certificates",
       "github": "https://github.com/frdmn/ssltools",
       "additional": {
-        "information": "A bunch of Bash tools to analyze, troubleshoot or inspect SSL certificates, requests or keys: \n
-\n
-* [sslcsr](https://github.com/frdmn/ssltools#sslcsr) - simple decypher and parse informations out a CSR (Certificate Sign Request)\n
-* [sslhost](https://github.com/frdmn/ssltools#sslhost) - get renewal informations and the CRT (certificate) itself based on a host",
+        "information": "A bunch of Bash tools to analyze, troubleshoot or inspect SSL certificates, requests or keys: \n\n* [sslcsr](https://github.com/frdmn/ssltools#sslcsr) - simple decypher and parse informations out a CSR (Certificate Sign Request)\n* [sslhost](https://github.com/frdmn/ssltools#sslhost) - get renewal informations and the CRT (certificate) itself based on a host",
         "license": "MIT",
         "dependencies": [
           {
