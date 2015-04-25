@@ -168,7 +168,11 @@
         </div>
         <ul class="typewriter">
           <?php foreach ($projects[$alias]['additional']['dependencies'] as $dependency): ?>
-            <li><?= $dependency['name']; ?> (<a href="<?= $dependency['link']; ?>"><?= preg_replace('/http[s]?:\/\//', '', $dependency['link']); ?></a>)</li>
+            <?php if (isset($dependency['link'])): ?>
+              <li><?= $dependency['name']; ?> (<a href="<?= $dependency['link']; ?>"><?= preg_replace('/http[s]?:\/\//', '', $dependency['link']); ?></a>)</li>
+            <?php else: ?>
+              <li><?= $dependency['name']; ?></li>
+            <?php endif; ?>
           <?php endforeach; ?>
         </ul>
       </div>
