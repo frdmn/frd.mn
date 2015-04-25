@@ -30,50 +30,6 @@
     }
   },
   "projects": {
-    "dotfiles": {
-      "name": "dotfiles",
-      "alias": "dotfiles",
-      "category": "scripts",
-      "date": "2014-02-23",
-      "description": "Simple bork-based dotfile setup for both OS X and Linux systems.",
-      "github": "https://github.com/frdmn/dotfiles",
-      "additional": {
-        "information": "this is optional and could be quite a bit of text \n* this is optional and could be quite a bit of text \n* this is optional and could be quite a bit of text \nthis is optional and could be quite a bit of text \n",
-        "libraries": [
-          {
-            "name": "Bork",
-            "link": "https://github.com/mattly/bork"
-          },
-          {
-            "name": "Something",
-            "link": "https://github.com/some/thing"
-          }
-        ]
-      }
-    },
-    "pushbullet-osx-services": {
-      "name": "Pushbullet OS X Services",
-      "alias": "pushbullet-osx-services",
-      "category": "scripts",
-      "date": "2014-02-23",
-      "description": "A few services to push stuff to Pushbullet",
-      "github": "https://github.com/frdmn/pushbullet-osx-services",
-      "additional": {
-        "information": false,
-        "libraries": [
-          {
-            "name": "Bork",
-            "link": "https://github.com/mattly/bork"
-          }
-        ],
-        "dependencies": [
-          {
-            "name": "OS X ¯\\_(ツ)_/¯",
-            "link": "http://apple.com"
-          }
-        ]
-      }
-    },
     "alfred-dongers": {
       "name": "alfred-dongers",
       "alias": "alfred-dongers",
@@ -88,6 +44,29 @@
           {
             "name": "Alfred",
             "link": "http://www.alfredapp.com"
+          }
+        ]
+      }
+    },
+    "pushbullet-osx-services": {
+      "name": "Pushbullet OS X Services",
+      "alias": "pushbullet-osx-services",
+      "category": "scripts",
+      "date": "2014-10-18",
+      "description": "A few services to push stuff to Pushbullet",
+      "github": "https://github.com/frdmn/pushbullet-osx-services",
+      "additional": {
+        "information": false,
+        "libraries": [
+          {
+            "name": "Bork",
+            "link": "https://github.com/mattly/bork"
+          }
+        ],
+        "dependencies": [
+          {
+            "name": "OS X ¯\\_(ツ)_/¯",
+            "link": "http://apple.com"
           }
         ]
       }
@@ -129,7 +108,7 @@
       "name": "docker-mailbox",
       "alias": "docker-mailbox",
       "category": "Docker, WIP",
-      "date": "2014-09-03",
+      "date": "2014-08-31",
       "description": "Postfix, Dovecot, Roundcube and ViMbAdmin in a Docker boat",
       "github": "https://github.com/frdmn/docker-mailbox",
       "additional": {
@@ -173,6 +152,27 @@
           {
             "name": "Alfred",
             "link": "http://www.alfredapp.com"
+          }
+        ]
+      }
+    },
+    "dotfiles": {
+      "name": "dotfiles",
+      "alias": "dotfiles",
+      "category": "scripts",
+      "date": "2014-08-11",
+      "description": "Simple bork-based dotfile setup for both OS X and Linux systems.",
+      "github": "https://github.com/frdmn/dotfiles",
+      "additional": {
+        "information": "this is optional and could be quite a bit of text \n* this is optional and could be quite a bit of text \n* this is optional and could be quite a bit of text \nthis is optional and could be quite a bit of text \n",
+        "libraries": [
+          {
+            "name": "Bork",
+            "link": "https://github.com/mattly/bork"
+          },
+          {
+            "name": "Something",
+            "link": "https://github.com/some/thing"
           }
         ]
       }
