@@ -90,35 +90,33 @@
               <span class="text-group__headline-inner">Language Detail:</span>
             </h2>
             <div class="grid">
-              <div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">
-                <div class="labeled-text">
-                  <div class="labeled-text__label-wrap">
-                    <span class="labeled-text__label">Shell</span>
-                  </div>
-                  <p class="typewriter">87.5%</p>
-                </div>
-                <div class="labeled-text">
-                  <div class="labeled-text__label-wrap">
-                    <span class="labeled-text__label">VimL</span>
-                  </div>
-                  <p class="typewriter">7.7%</p>
-                </div>
+              <?php
+                // Increment variable to determine if we need to open a new 1of2 div
+                $languageIncrement = 1;
 
-              </div><!--
-           --><div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">
-                <div class="labeled-text">
-                  <div class="labeled-text__label-wrap">
-                    <span class="labeled-text__label">Javascript</span>
+                // Loop through available languages
+                foreach ($github[$alias]['languages'] as $language => $percent) {
+                  // If odd increment count
+                  if($languageIncrement%2) {
+                    // Close div if it's not the first
+                    echo $languageIncrement > 0 ? '</div>' : '';
+                    // Start new 1of2 grid container
+                    echo '<div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">';
+                  }
+                  ?>
+
+                  <div class="labeled-text">
+                    <div class="labeled-text__label-wrap">
+                      <span class="labeled-text__label"><?= $language ?></span>
+                    </div>
+                    <p class="typewriter"><?= $percent ?>%</p>
                   </div>
-                  <p class="typewriter">3.6%</p>
-                </div>
-                <div class="labeled-text">
-                  <div class="labeled-text__label-wrap">
-                    <span class="labeled-text__label">Coffeescript</span>
-                  </div>
-                  <p class="typewriter">1.2%</p>
-                </div>
-              </div>
+
+                  <?php
+                  // Increment variable
+                  $languageIncrement++;
+                }
+              ?>
             </div>
           </div>
         </div>
