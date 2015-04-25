@@ -265,6 +265,37 @@
         ]
       }
     },
+    "old.frd.mn": {
+      "name": "old.frd.mn",
+      "alias": "old.frd.mn",
+      "category": "web",
+      "date": "2014-09-27",
+      "description": "Repository of my old personal website",
+      "github": "https://github.com/frdmn/old.frd.mn",
+      "additional": {
+        "information": "Old glitch GIF website, which can be found here: [http://old.frd.mn](http://old.frd.mn).",
+        "dependencies": [
+          {
+            "name": "NodeJS"
+          },
+          {
+            "name": "Grunt"
+          },
+          {
+            "name": "Bower"
+          }
+        ],
+        "libraries": [
+          {
+            "name": "jQuery"
+          },
+          {
+            "name": "Handlebars.js"
+          }
+        ],
+        "license": "WTFPL"
+      }
+    },
     "ssltools": {
       "name": "ssltools",
       "alias": "ssltools",
