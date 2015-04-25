@@ -173,6 +173,16 @@
         </ul>
       </div>
     <?php endif; ?>
+    <?php if (isset($projects[$alias]['additional']['license'])): ?>
+      <div class="labeled-text">
+        <div class="labeled-text__label-wrap">
+          <span class="labeled-text__label">License</span>
+        </div>
+        <div class="typewriter">
+          <p><a href="<?= $projects[$alias]['github']; ?>/blob/master/LICENSE" target="_blank"><?= $projects[$alias]['additional']['license']; ?></a></p>
+        </div>
+      </div>
+    <?php endif; ?>
 <?php
   } else {
     include '_error.php';
