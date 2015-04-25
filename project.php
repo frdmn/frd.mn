@@ -56,7 +56,7 @@
   </div>
 </div>
 <div class="constrain constrain--max text--center">
-  <img class="project-image" src="assets/images/project-dummy.png" alt="project dummy" />
+  <img class="project-image" src="assets/images/project-dummy.png" alt="Project: <?= $projects[$alias]['name']; ?>" />
 </div>
 <div class="constrain constrain--max">
   <div class="sheet">
