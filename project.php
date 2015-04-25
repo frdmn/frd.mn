@@ -1,9 +1,10 @@
 <?php
-  require '_setup.php';
   include '_header.php';
   if(isset($_GET['alias'])) {
     $alias = $_GET['alias'];
   }
+
+  $parser = new \cebe\markdown\Markdown();
 
   if (isset($projects[$alias])) {
 ?>
@@ -143,9 +144,9 @@
         <div class="labeled-text__label-wrap">
           <span class="labeled-text__label">Detailed Information</span>
         </div>
-        <p class="typewriter">
-          <?= $projects[$alias]['additional']['information']; ?>
-        </p>
+        <div class="typewriter">
+          <?= $parser->parse($projects[$alias]['additional']['information']); ?>
+        </div>
       </div>
     <?php endif; ?>
     <?php if (isset($projects[$alias]['additional']['libraries'])): ?>

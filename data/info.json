@@ -37,7 +37,10 @@
       "description": "Simple bork-based dotfile setup for both OS X and Linux systems.",
       "github": "https://github.com/frdmn/dotfiles",
       "additional": {
-        "information": "this is optional and could be quite a bit of text \nthis is optional and could be quite a bit of text \nthis is optional and could be quite a bit of text \nthis is optional and could be quite a bit of text \n",
+        "information": "this is optional and could be quite a bit of text \n
+* this is optional and could be quite a bit of text \n
+* this is optional and could be quite a bit of text \n
+this is optional and could be quite a bit of text \n",
         "libraries": [
           {
             "name": "Bork",

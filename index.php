@@ -1,5 +1,4 @@
 <?php
-  require '_setup.php';
   include '_header.php';
 ?>
 <div class="constrain constrain--max">

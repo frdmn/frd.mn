@@ -1,6 +1,7 @@
 {
     "require": {
         "knplabs/github-api": "~1.2",
-        "vlucas/phpdotenv": "~1.1"
+        "vlucas/phpdotenv": "~1.1",
+        "cebe/markdown": "~1.1"
     }
 }
