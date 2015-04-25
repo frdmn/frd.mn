@@ -17,7 +17,9 @@ Repository of my personal website / project portfolio.
   `composer install`
 4. Run Grunt task:  
   `grunt`
-5. And update the `github.json` initially:  
+5. Copy the default `.env` and insert your GitHub API token:  
+  `cp .env.default .env`
+6. And update the `github.json` initially:  
   `grunt parse`
 
 ## Usage
