@@ -1,7 +1,11 @@
 {
-  "name": "html",
+  "name": "frd.mn",
   "version": "0.0.1",
-  "description": "website",
+  "description": "Repository of my personal website / project portfolio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frdmn/frd.mn.git"
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-autoprefixer": "~0.6.5",

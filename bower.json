@@ -1,8 +1,10 @@
 {
-  "name": "html",
+  "name": "frd.mn",
   "version": "0.0.1",
+  "description": "Repository of my personal website / project portfolio",
   "authors": [
-    "marian friedmann"
+    "Jonas Friedmann",
+    "Marian Friedmann"
   ],
   "description": "website",
   "license": "MIT",
