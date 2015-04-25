@@ -74,6 +74,24 @@
         ]
       }
     },
+    "alfred-dongers": {
+      "name": "alfred-dongers",
+      "alias": "alfred-dongers",
+      "category": "Alfred",
+      "date": "2014-11-13",
+      "description": "Alfred workflow to list unicode emoticons easily ໒(”•̀ᗜ•́”)७",
+      "github": "https://github.com/frdmn/alfred-dongers",
+      "additional": {
+        "information": "Alfred workflow to quickly browse through dongers via [dongerlist.com](http://dongerlist.com/).",
+        "license": "WTFPL",
+        "dependencies": [
+          {
+            "name": "Alfred",
+            "link": "http://www.alfredapp.com"
+          }
+        ]
+      }
+    },
     "uping": {
       "name": "uping",
       "alias": "uping",
