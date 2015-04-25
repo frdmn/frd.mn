@@ -181,10 +181,21 @@ module.exports = function(grunt) {
                     spawn: false
                 }
             }
+        },
+
+        // Shell
+        shell: {
+            options: {
+                stderr: true
+            },
+            parse: {
+                command: 'php parser.php > data/github.json'
+            }
         }
     });
 
     grunt.registerTask('default', ['sass:build', 'autoprefixer', 'concat', 'uglify', 'imagemin']);
     grunt.registerTask('dev', ['connect', 'watch', 'notify']);
     grunt.registerTask('dev:sync', ['browser_sync', 'watch', 'notify']);
+    grunt.registerTask('parse', ['shell:parse']);
 };

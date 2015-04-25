@@ -15,8 +15,10 @@ Repository of my personal website / project portfolio.
   `npm install`  
   `bower install`  
   `composer install`
-4. Run grunt task:  
+4. Run Grunt task:  
   `grunt`
+5. And update the `github.json` initially:  
+  `grunt parse`
 
 ## Usage
 
