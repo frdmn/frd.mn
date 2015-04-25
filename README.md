@@ -40,13 +40,6 @@ rewrite ^(.*)\.html$ /project.php?alias=$1;
 * Bower
 * Composer
 
-## Todos
-
-- [X] github.json schema festlegen (infos unterseite: stars, forks, language, language detail)
-- [X] github.json per script aufbauen (anhand vom projects array [info.json])
-- [X] pretty urls: /alias.html statt /project.php?alias=$alias
-- [ ] imprint?
-
 ## Credits
 
 * Marian Friedmann ([rnarian](https://github.com/rnarian)) 
