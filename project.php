@@ -91,30 +91,46 @@
             </h2>
             <div class="grid">
               <?php
-                // Increment variable to determine if we need to open a new 1of2 div
-                $languageIncrement = 1;
 
-                // Loop through available languages
-                foreach ($github[$alias]['languages'] as $language => $percent) {
-                  // If odd increment count
-                  if($languageIncrement%2) {
-                    // Close div if it's not the first
-                    echo $languageIncrement > 0 ? '</div>' : '';
-                    // Start new 1of2 grid container
-                    echo '<div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">';
-                  }
-                  ?>
+                if (isset($github[$alias]['languages'])) {
 
-                  <div class="labeled-text">
-                    <div class="labeled-text__label-wrap">
-                      <span class="labeled-text__label"><?= $language ?></span>
+                  // Increment variable to determine if we need to open a new 1of2 div
+                  $languageIncrement = 1;
+
+                  // Loop through available languages
+                  foreach ($github[$alias]['languages'] as $language => $percent) {
+                    // If odd increment count
+                    if($languageIncrement%2) {
+                      // Close div if it's not the first
+                      echo $languageIncrement > 0 ? '</div>' : '';
+                      // Start new 1of2 grid container
+                      echo '<div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">';
+                    }
+                    ?>
+
+                    <div class="labeled-text">
+                      <div class="labeled-text__label-wrap">
+                        <span class="labeled-text__label"><?= $language ?></span>
+                      </div>
+                      <p class="typewriter"><?= $percent ?>%</p>
                     </div>
-                    <p class="typewriter"><?= $percent ?>%</p>
-                  </div>
 
+                    <?php
+                    // Increment variable
+                    $languageIncrement++;
+                  }
+                } else {
+                  // No languages available
+                  ?>
+                    <div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">
+                      <div class="labeled-text">
+                        <div class="labeled-text__label-wrap">
+                          <span class="labeled-text__label">N/A</span>
+                        </div>
+                        <p class="typewriter">??%</p>
+                      </div>
+                    </div>
                   <?php
-                  // Increment variable
-                  $languageIncrement++;
                 }
               ?>
             </div>
