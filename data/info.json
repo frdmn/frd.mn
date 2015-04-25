@@ -77,6 +77,24 @@ this is optional and could be quite a bit of text \n",
         ]
       }
     },
+    },
+    "CommuniGate-scripts": {
+      "name": "CommuniGate scripts",
+      "alias": "CommuniGate-scripts",
+      "category": "scripts",
+      "date": "2014-03-05",
+      "description": "Perl scripts for the CommuniGate Pro mail server system",
+      "github": "https://github.com/frdmn/CommuniGate-scripts",
+      "additional": {
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "CommuniGate Pro",
+            "link": "https://www.communigate.com"
+          }
+        ]
+      }
+    },
     "ssltools": {
       "name": "ssltools",
       "alias": "ssltools",
