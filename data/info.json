@@ -164,17 +164,26 @@
       "description": "Simple bork-based dotfile setup for both OS X and Linux systems.",
       "github": "https://github.com/frdmn/dotfiles",
       "additional": {
-        "information": "this is optional and could be quite a bit of text \n* this is optional and could be quite a bit of text \n* this is optional and could be quite a bit of text \nthis is optional and could be quite a bit of text \n",
+        "information": "Bork-based dotfile setup for Mac and Linux systems that is really simple and easy to understand.\n\nFeatures:\n\n* Dotfile wrapper based on [Bork](https://github.com/mattly/bork)\n* Brew and Cask package check ensures that your packages are installed\n* Mac App Store app check ensures that your OS X apps are installed\n* npm (Node Package Manager) package check\n* Ruby gem's check\n* apt-get package check for Linux systems\n* Sublime Text 3 package check (via [Package Control](packagecontrol.io))\n* Commented code, so you know what is actually going on\n* [Vundle](https://github.com/gmarik/Vundle.vim) VIm plugin manager\n* Theme support for your prompts based on [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/)\n* Lightweight Atom package installer which uses a bundle [Atomfile](opt/Atomfile) (and apm of course)\n* Hostname specific processing and customizations\n* ZSH tab/auto completion\n* [Powerline](https://github.com/Lokaltog/powerline) in vi and tmux\n* [zsh-autosuggestions](https://github.com/tarruda/zsh-autosuggestions) plugin\n* [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search) plugin\n* [zsh-notify](https://github.com/marzocchi/zsh-notify) plugin",
         "libraries": [
           {
             "name": "Bork",
             "link": "https://github.com/mattly/bork"
           },
           {
-            "name": "Something",
-            "link": "https://github.com/some/thing"
+            "name": "Sublime Text 3"
+          },
+          {
+            "name": "/usr/bin/tmux"
+          },
+          {
+            "name": "/usr/bin/vim"
+          },
+          {
+            "name": "/bin/zsh"
           }
-        ]
+        ],
+        "license": "MIT"
       }
     },
     "znc-logviewer": {
