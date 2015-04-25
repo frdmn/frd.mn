@@ -77,6 +77,23 @@ this is optional and could be quite a bit of text \n",
         ]
       }
     },
+    "alfred-ldap": {
+      "name": "alfred-ldap",
+      "alias": "alfred-ldap",
+      "category": "Alfred",
+      "date": "2014-08-26",
+      "description": "Alfred workflow to search for phone numbersthrough LDAP",
+      "github": "https://github.com/frdmn/alfred-ldap",
+      "additional": {
+        "information": "Alfred workflow to search for telephone numbers of coworkers through an Active Directory/LDAP directory.",
+        "license": "WTFPL",
+        "dependencies": [
+          {
+            "name": "Alfred",
+            "link": "http://www.alfredapp.com"
+          }
+        ]
+      }
     },
     "CommuniGate-scripts": {
       "name": "CommuniGate scripts",
