@@ -74,11 +74,23 @@
         ]
       }
     },
+    "uping": {
+      "name": "uping",
+      "alias": "uping",
+      "category": "scripts",
+      "date": "2014-09-22",
+      "description": "Get notified as soon as a host is responding to ping.",
+      "github": "https://github.com/frdmn/uping",
+      "additional": {
+        "information": "(up)ing is a simple Bash script to get notified as soon as a currently offline host is reachable again.",
+        "license": "WTFPL"
+      }
+    },
     "alfred-ciscocall": {
       "name": "alfred-ciscocall",
       "alias": "alfred-ciscocall",
       "category": "Alfred",
-      "date": "2014-08-26",
+      "date": "2014-09-03",
       "description": "Alfred workflow to search for phone numbersthrough LDAP",
       "github": "https://github.com/frdmn/alfred-ciscocall",
       "additional": {
