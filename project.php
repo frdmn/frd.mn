@@ -16,7 +16,7 @@
       </h1>
       <div class="constrain constrain--small constrain--text">
         <p class="text--hero space--bottom-double space-lap--bottom-none">
-          <?= $projects[$alias]['short_description']; ?>
+          <?= $projects[$alias]['description']; ?>
         </p>
       </div>
     </div><!--
@@ -77,12 +77,6 @@
             <span class="labeled-text__label">Date</span>
           </div>
           <p class="typewriter"><?= explode("-", $projects[$alias]['date'])[0]; ?><span class="typewriter__prefill">—</span><?= explode("-", $projects[$alias]['date'])[1]; ?><span class="typewriter__prefill">—</span><?= explode("-", $projects[$alias]['date'])[2]; ?></p>
-        </div>
-        <div class="labeled-text">
-          <div class="labeled-text__label-wrap">
-            <span class="labeled-text__label">Description</span>
-          </div>
-          <p class="typewriter"><?= $projects[$alias]['description']; ?></p>
         </div>
       </div><!--
    --><div class="grid__item width-lap--1of2">

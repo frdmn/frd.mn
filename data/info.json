@@ -34,9 +34,8 @@
       "alias": "dotfiles",
       "category": "scripts",
       "date": "2014-02-23",
-      "short_description": "Simple bork-based dotfile setup for both OS X and Linux systems.",
+      "description": "Simple bork-based dotfile setup for both OS X and Linux systems.",
       "github": "https://github.com/frdmn/dotfiles",
-      "description": "Bork-based dotfile setup for Mac and Linux systems that is really simple and easy to understand.",
       "additional": {
         "information": "this is optional and could be quite a bit of text \nthis is optional and could be quite a bit of text \nthis is optional and could be quite a bit of text \nthis is optional and could be quite a bit of text \n",
         "libraries": [
@@ -56,9 +55,8 @@
       "alias": "pushbullet-osx-services",
       "category": "scripts",
       "date": "2014-02-23",
-      "short_description": "A few services to push stuff to Pushbullet",
+      "description": "A few services to push stuff to Pushbullet",
       "github": "https://github.com/frdmn/pushbullet-osx-services",
-      "description": "OS X services that allows you to quickly push stuff (selected text or files in Finder) to Pushbullet via the systems context menu (Rightclick -> Services). Probably obsolete when they release a native OS X app.",
       "additional": {
         "information": false,
         "libraries": [
