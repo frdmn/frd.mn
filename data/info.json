@@ -125,6 +125,42 @@
         ]
       }
     },
+    "znc-logviewer": {
+      "name": "znc-logviewer",
+      "alias": "znc-logviewer",
+      "category": "web, WIP",
+      "date": "2014-08-03",
+      "description": "Node based web interface to browse through ZNC log files",
+      "github": "https://github.com/frdmn/znc-logviewer",
+      "additional": {
+        "information": "Simple ZNC logviewer to lookup IRC log files via a web interface. This project is a work in progess, don't use it in production!",
+        "dependencies": [
+          {
+            "name": "NodeJS"
+          },
+          {
+            "name": "ZNC",
+            "link": "http://znc.in"
+          }
+        ],
+        "libraries": [
+          {
+            "name": "Grunt"
+          },
+          {
+            "name": "Bower"
+          },
+          {
+            "name": "Express.js"
+          },
+          {
+            "name": "Twitter Bootstrap",
+            "link": "http://getbootstrap.com"
+          }
+        ],
+        "license": "WTFPL"
+      }
+    },
     "CommuniGate-scripts": {
       "name": "CommuniGate scripts",
       "alias": "CommuniGate-scripts",
