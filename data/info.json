@@ -76,6 +76,27 @@ this is optional and could be quite a bit of text \n",
           }
         ]
       }
+    },
+    "ssltools": {
+      "name": "ssltools",
+      "alias": "ssltools",
+      "category": "scripts",
+      "date": "2013-09-17",
+      "description": "Bash scripts to analyze, troubleshoot and inspect SSL certificates",
+      "github": "https://github.com/frdmn/ssltools",
+      "additional": {
+        "information": "A bunch of Bash tools to analyze, troubleshoot or inspect SSL certificates, requests or keys: \n
+\n
+* [sslcsr](https://github.com/frdmn/ssltools#sslcsr) - simple decypher and parse informations out a CSR (Certificate Sign Request)\n
+* [sslhost](https://github.com/frdmn/ssltools#sslhost) - get renewal informations and the CRT (certificate) itself based on a host",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "OS X",
+            "link": "http://apple.com"
+          }
+        ]
+      }
     }
   }
 }
