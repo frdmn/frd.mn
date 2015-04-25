@@ -107,6 +107,40 @@
         ]
       }
     },
+    "docker-mailbox": {
+      "name": "docker-mailbox",
+      "alias": "docker-mailbox",
+      "category": "Docker, WIP",
+      "date": "2014-09-03",
+      "description": "Postfix, Dovecot, Roundcube and ViMbAdmin in a Docker boat",
+      "github": "https://github.com/frdmn/docker-mailbox",
+      "additional": {
+        "information": "Docker image that ships a running Nginx/PHP, Dovecot, Postfix as well as ViMbAdmin to configure and maintain the mail server.\n\nThis project is a work in progess, don't use it in production!",
+        "dependencies": [
+          {
+            "name": "Docker",
+            "link": "http://docker.com"
+          }
+        ],
+        "libraries": [
+          {
+            "name": "Postfix"
+          },
+          {
+            "name": "Dovecot"
+          },
+          {
+            "name": "Roundcube",
+            "link": "http://roundcube.net"
+          },
+          {
+            "name": "ViMbAdmin",
+            "link": "http://www.vimbadmin.net"
+          }
+        ],
+        "license": "MIT"
+      }
+    },
     "alfred-ldap": {
       "name": "alfred-ldap",
       "alias": "alfred-ldap",
@@ -133,7 +167,7 @@
       "description": "Node based web interface to browse through ZNC log files",
       "github": "https://github.com/frdmn/znc-logviewer",
       "additional": {
-        "information": "Simple ZNC logviewer to lookup IRC log files via a web interface. This project is a work in progess, don't use it in production!",
+        "information": "Simple ZNC logviewer to lookup IRC log files via a web interface.\n\nThis project is a work in progess, don't use it in production!",
         "dependencies": [
           {
             "name": "NodeJS"
