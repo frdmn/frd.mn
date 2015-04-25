@@ -1,5 +1,6 @@
 <?php
-  include '_header.php';
+  include __DIR__.'/includes/_header.php';
+
   if(isset($_GET['alias'])) {
     $alias = $_GET['alias'];
   }
@@ -193,7 +194,7 @@
     <?php endif; ?>
 <?php
   } else {
-    include '_error.php';
+    include __DIR__.'/includes/_error.php';
   }
-  include '_footer.php';
+  include __DIR__.'/includes/_footer.php';
 ?>

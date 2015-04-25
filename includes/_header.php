@@ -1,5 +1,5 @@
 <?php
-  require '_setup.php';
+  require __DIR__.'/_setup.php';
 ?>
 <!doctype html>
 <html lang="en">

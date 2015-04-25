@@ -1,5 +1,5 @@
 <?php
-  include '_header.php';
+  include __DIR__.'/includes/_header.php';
 ?>
 <div class="constrain constrain--max">
   <div class="sheet">
@@ -104,5 +104,5 @@
       <?php endforeach; ?>
     </div>
 <?php
-  include '_footer.php';
+  include __DIR__.'/includes/_footer.php';
 ?>
