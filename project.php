@@ -156,7 +156,11 @@
         </div>
         <ul class="typewriter">
           <?php foreach ($projects[$alias]['additional']['libraries'] as $library): ?>
-            <li><?= $library['name']; ?> (<a href="<?= $library['link']; ?>"><?= preg_replace('/https:\/\//', '', $library['link']); ?></a>)</li>
+            <?php if (isset($library['link'])): ?>
+              <li><?= $library['name']; ?> (<a href="<?= $library['link']; ?>"><?= preg_replace('/http[s]?:\/\//', '', $library['link']); ?></a>)</li>
+            <?php else: ?>
+              <li><?= $library['name']; ?></li>
+            <?php endif; ?>
           <?php endforeach; ?>
         </ul>
       </div>
