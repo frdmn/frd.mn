@@ -2,6 +2,8 @@
 
 [![Current tag](http://img.shields.io/github/tag/frdmn/frd.mn.svg)](https://github.com/frdmn/frd.mn/tags) [![Repository issues](http://issuestats.com/github/frdmn/frd.mn/badge/issue)](http://issuestats.com/github/frdmn/frd.mn) [![Flattr this repository](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=frdmn&url=https://github.com/frdmn/frd.mn)
 
+![](http://up.frd.mn/ItPzG.png)
+
 Repository of my personal website / project portfolio.
 
 ## Installation
