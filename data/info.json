@@ -173,17 +173,17 @@
             "name": "NodeJS"
           },
           {
-            "name": "ZNC",
-            "link": "http://znc.in"
-          }
-        ],
-        "libraries": [
-          {
             "name": "Grunt"
           },
           {
             "name": "Bower"
           },
+          {
+            "name": "ZNC",
+            "link": "http://znc.in"
+          }
+        ],
+        "libraries": [
           {
             "name": "Express.js"
           },
@@ -193,6 +193,41 @@
           }
         ],
         "license": "WTFPL"
+      }
+    },
+    "Live.app": {
+      "name": "Live.app",
+      "alias": "Live.app",
+      "category": "web",
+      "date": "2014-07-20",
+      "description": "Live.app is a client side JavaScript web app to message your Xbox Live friends",
+      "github": "https://github.com/frdmn/Live.app",
+      "additional": {
+        "information": "Live.app is a client side JavaScript web app to message your Xbox Live friends. It uses the great RESTful [XboxAPI.com](https://xboxapi.com) to communicate with Xbox Live. PouchDB is used as IndexDB/WebSQL storage to cache and deliver the actual informations more quickly and also to reduce the actual API calls to XboxAPI.",
+        "dependencies": [
+          {
+            "name": "NodeJS"
+          },
+          {
+            "name": "Grunt"
+          },
+          {
+            "name": "Bower"
+          },
+          {
+            "name": "Xbox Live account"
+          }
+        ],
+        "libraries": [
+          {
+            "name": "PouchDB"
+          },
+          {
+            "name": "Twitter Bootstrap",
+            "link": "http://getbootstrap.com"
+          }
+        ],
+        "license": "MIT"
       }
     },
     "CommuniGate-scripts": {
