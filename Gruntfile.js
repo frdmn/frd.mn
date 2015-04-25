@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         dirs: {
-            bower: 'bower_components',
+            bower: 'vendor/bower_components',
             css: 'assets/css',
             js: 'assets/js',
             images: 'assets/images',
