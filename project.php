@@ -32,19 +32,19 @@
        --><div class="grid__item width--1of4">
             <div class="labeled-text-hero">
               <span class="labeled-text-hero__label">Stars</span>
-              <p class="space--bottom-none">14</p>
+              <p class="space--bottom-none"><?= $github[$alias]['stars'] ?></p>
             </div>
           </div><!--
        --><div class="grid__item width--1of4">
             <div class="labeled-text-hero">
               <span class="labeled-text-hero__label">Forks</span>
-              <p class="space--bottom-none">2</p>
+              <p class="space--bottom-none"><?= $github[$alias]['forks'] ?></p>
             </div>
           </div><!--
        --><div class="grid__item width--1of4">
             <div class="labeled-text-hero">
               <span class="labeled-text-hero__label">Language</span>
-              <p class="space--bottom-none">Shell</p>
+              <p class="space--bottom-none"><?= ($github[$alias]['language']) ? $github[$alias]['language'] : 'N/A' ?></p>
             </div>
           </div>
         </div>
