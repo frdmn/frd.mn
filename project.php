@@ -10,11 +10,11 @@
   <div class="grid">
     <div class="grid__item width-lap--2of3 width-desk--1of2">
       <h1 class="heading-1 headline headline--upper space--bottom-quarter">
-        <?php echo $projects[$alias]['name']; ?>
+        <?= $projects[$alias]['name']; ?>
       </h1>
       <div class="constrain constrain--small constrain--text">
         <p class="text--hero space--bottom-double space-lap--bottom-none">
-          <?php echo $projects[$alias]['short_description']; ?>
+          <?= $projects[$alias]['short_description']; ?>
         </p>
       </div>
     </div><!--
@@ -25,7 +25,7 @@
             <div class="fading-seperator">
               <div class="labeled-text-hero">
                 <span class="labeled-text-hero__label">Github Repo</span>
-                <p class="space--bottom-none"><a href="<?php echo $projects[$alias]['github']; ?>" target="_blank"><?php echo preg_replace('/https:\/\/github.com\//', '', $projects[$alias]['github']); ?></a></p>
+                <p class="space--bottom-none"><a href="<?= $projects[$alias]['github']; ?>" target="_blank"><?= preg_replace('/https:\/\/github.com\//', '', $projects[$alias]['github']); ?></a></p>
               </div>
             </div>
           </div><!--
@@ -68,19 +68,19 @@
           <div class="labeled-text__label-wrap">
             <span class="labeled-text__label">Name</span>
           </div>
-          <p class="typewriter"><?php echo $projects[$alias]['name']; ?></p>
+          <p class="typewriter"><?= $projects[$alias]['name']; ?></p>
         </div>
         <div class="labeled-text">
           <div class="labeled-text__label-wrap">
             <span class="labeled-text__label">Date</span>
           </div>
-          <p class="typewriter"><?php echo explode("-", $projects[$alias]['date'])[0]; ?><span class="typewriter__prefill">—</span><?php echo explode("-", $projects[$alias]['date'])[1]; ?><span class="typewriter__prefill">—</span><?php echo explode("-", $projects[$alias]['date'])[2]; ?></p>
+          <p class="typewriter"><?= explode("-", $projects[$alias]['date'])[0]; ?><span class="typewriter__prefill">—</span><?= explode("-", $projects[$alias]['date'])[1]; ?><span class="typewriter__prefill">—</span><?= explode("-", $projects[$alias]['date'])[2]; ?></p>
         </div>
         <div class="labeled-text">
           <div class="labeled-text__label-wrap">
             <span class="labeled-text__label">Description</span>
           </div>
-          <p class="typewriter"><?php echo $projects[$alias]['description']; ?></p>
+          <p class="typewriter"><?= $projects[$alias]['description']; ?></p>
         </div>
       </div><!--
    --><div class="grid__item width-lap--1of2">
@@ -134,7 +134,7 @@
           <span class="labeled-text__label">Detailed Information</span>
         </div>
         <p class="typewriter">
-          <?php echo $projects[$alias]['additional']['information']; ?>
+          <?= $projects[$alias]['additional']['information']; ?>
         </p>
       </div>
     <?php endif; ?>
@@ -145,7 +145,7 @@
         </div>
         <ul class="typewriter">
           <?php foreach ($projects[$alias]['additional']['libraries'] as $library): ?>
-            <li><?php echo $library['name']; ?> (<a href="<?php echo $library['link']; ?>"><?php echo preg_replace('/https:\/\//', '', $library['link']); ?></a>)</li>
+            <li><?= $library['name']; ?> (<a href="<?= $library['link']; ?>"><?= preg_replace('/https:\/\//', '', $library['link']); ?></a>)</li>
           <?php endforeach; ?>
         </ul>
       </div>
@@ -157,7 +157,7 @@
         </div>
         <ul class="typewriter">
           <?php foreach ($projects[$alias]['additional']['dependencies'] as $dependency): ?>
-            <li><?php echo $dependency['name']; ?> (<a href="<?php echo $dependency['link']; ?>"><?php echo preg_replace('/http[s]?:\/\//', '', $dependency['link']); ?></a>)</li>
+            <li><?= $dependency['name']; ?> (<a href="<?= $dependency['link']; ?>"><?= preg_replace('/http[s]?:\/\//', '', $dependency['link']); ?></a>)</li>
           <?php endforeach; ?>
         </ul>
       </div>
