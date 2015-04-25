@@ -4,6 +4,8 @@
   if(isset($_GET['alias'])) {
     $alias = $_GET['alias'];
   }
+
+  if (isset($projects[$alias])) {
 ?>
 
 <div class="constrain constrain--max constrain--hero space--top-double space-desk--top-triple space--bottom-double">
@@ -177,5 +179,8 @@
       </div>
     <?php endif; ?>
 <?php
+  } else {
+    include '_error.php';
+  }
   include '_footer.php';
 ?>
