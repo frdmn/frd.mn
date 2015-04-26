@@ -1,3 +1,8 @@
-Options +FollowSymLinks
-RewriteEngine On
-RewriteRule ^(.*)\.html$ /project.php?alias=$1
+<IfModule mod_rewrite.c>
+  SetEnv HTTP_MOD_REWRITE On
+
+  RewriteEngine on
+  Options +FollowSymLinks
+  RewriteEngine On
+  RewriteRule ^(.*)\.html$ /project.php?alias=$1
+</IfModule>
