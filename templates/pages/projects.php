@@ -129,7 +129,7 @@
                 <span class="labeled-text__label">Detailed Information</span>
               </div>
               <div class="typewriter">
-                <?= $parser->parse($data['projects'][$alias]['additional']['information']); ?>
+                <?= $markdown->parse($data['projects'][$alias]['additional']['information']); ?>
               </div>
             </div>
           <?php endif; ?>

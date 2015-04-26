@@ -67,15 +67,16 @@
 
   // GET /project route
   $router->respond('GET', '/[:project]', function ($request) use ($templates, $data)  {
-    $parser = new \cebe\markdown\Markdown();
+
+    $markdown = new \cebe\markdown\Markdown();
     $alias = $request->project;
 
     // Check if project actually exists
     if (isset($data['projects'][$alias])) {
-      echo $templates->render('pages/projects', compact('data', 'alias', 'parser'));
+      echo $templates->render('pages/projects', compact('data', 'alias', 'markdown'));
     } else {
       // Doesn't exist, render error page
-      echo $templates->render('pages/error', compact('data', 'alias', 'parser'));
+      echo $templates->render('pages/error', compact('data', 'alias', 'markdown'));
     }
   });
 
