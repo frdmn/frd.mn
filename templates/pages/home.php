@@ -93,7 +93,7 @@
               <p class="typewriter space--bottom-none"><?= explode("-", $project['date'])[0]; ?><span class="typewriter__prefill">—</span><?= explode("-", $project['date'])[1]; ?><span class="typewriter__prefill">—</span><?= explode("-", $project['date'])[2]; ?></p>
             </div>
             <div class="project-table__title">
-              <p class="typewriter space--bottom-none"><a href="<?= prepareProjectURL($project['alias']); ?>"><?= $project['name']; ?></a></p>
+              <p class="typewriter space--bottom-none"><a href="<?= prepareProjectURL($project['name']); ?>"><?= $project['name']; ?></a></p>
             </div>
             <div class="project-table__category">
               <p class="typewriter space--bottom-none"><?= $project['category']; ?></p>

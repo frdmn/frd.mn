@@ -31,6 +31,7 @@
   },
   "projects": {
     "alfred-dongers": {
+      "owner": "frdmn",
       "name": "alfred-dongers",
       "alias": "alfred-dongers",
       "category": "Alfred",
@@ -49,6 +50,7 @@
       }
     },
     "pushbullet-osx-services": {
+      "owner": "frdmn",
       "name": "Pushbullet OS X Services",
       "alias": "pushbullet-osx-services",
       "category": "scripts",
@@ -72,6 +74,7 @@
       }
     },
     "uping": {
+      "owner": "frdmn",
       "name": "uping",
       "alias": "uping",
       "category": "scripts",
@@ -84,6 +87,7 @@
       }
     },
     "alfred-ciscocall": {
+      "owner": "frdmn",
       "name": "alfred-ciscocall",
       "alias": "alfred-ciscocall",
       "category": "Alfred",
@@ -105,6 +109,7 @@
       }
     },
     "docker-mailbox": {
+      "owner": "frdmn",
       "name": "docker-mailbox",
       "alias": "docker-mailbox",
       "category": "Docker, WIP",
@@ -139,6 +144,7 @@
       }
     },
     "alfred-ldap": {
+      "owner": "frdmn",
       "name": "alfred-ldap",
       "alias": "alfred-ldap",
       "category": "Alfred",
@@ -157,6 +163,7 @@
       }
     },
     "dotfiles": {
+      "owner": "frdmn",
       "name": "dotfiles",
       "alias": "dotfiles",
       "category": "scripts",
@@ -187,6 +194,7 @@
       }
     },
     "znc-logviewer": {
+      "owner": "frdmn",
       "name": "znc-logviewer",
       "alias": "znc-logviewer",
       "category": "web, WIP",
@@ -226,6 +234,7 @@
       }
     },
     "Live.app": {
+      "owner": "frdmn",
       "name": "Live.app",
       "alias": "Live.app",
       "category": "web",
@@ -264,6 +273,7 @@
       }
     },
     "CommuniGate-scripts": {
+      "owner": "frdmn",
       "name": "CommuniGate scripts",
       "alias": "CommuniGate-scripts",
       "category": "scripts",
@@ -281,6 +291,7 @@
       }
     },
     "old.frd.mn": {
+      "owner": "frdmn",
       "name": "old.frd.mn",
       "alias": "old.frd.mn",
       "category": "web",
@@ -312,6 +323,7 @@
       }
     },
     "ssltools": {
+      "owner": "frdmn",
       "name": "ssltools",
       "alias": "ssltools",
       "category": "scripts",
@@ -330,6 +342,7 @@
       }
     },
     "GiraHelper": {
+      "owner": "frdmn",
       "name": "GiraHelper",
       "alias": "GiraHelper",
       "category": "scripts",

@@ -25,19 +25,19 @@
              --><div class="grid__item width--1of4">
                   <div class="labeled-text-hero">
                     <span class="labeled-text-hero__label">Stars</span>
-                    <p class="space--bottom-none"><?= $data['github'][$alias]['stars'] ?></p>
+                    <p class="space--bottom-none"><?= $data['github'][$data['projects'][$alias]['owner'].'/'.$alias]['stars'] ?></p>
                   </div>
                 </div><!--
              --><div class="grid__item width--1of4">
                   <div class="labeled-text-hero">
                     <span class="labeled-text-hero__label">Forks</span>
-                    <p class="space--bottom-none"><?= $data['github'][$alias]['forks'] ?></p>
+                    <p class="space--bottom-none"><?= $data['github'][$data['projects'][$alias]['owner'].'/'.$alias]['forks'] ?></p>
                   </div>
                 </div><!--
              --><div class="grid__item width--1of4">
                   <div class="labeled-text-hero">
                     <span class="labeled-text-hero__label">Language</span>
-                    <p class="space--bottom-none"><?= ($data['github'][$alias]['language']) ? $data['github'][$alias]['language'] : 'N/A' ?></p>
+                    <p class="space--bottom-none"><?= (isset($data['github'][$data['projects'][$alias]['owner'].'/'.$alias]['language'])) ? $data['github'][$data['projects'][$alias]['owner'].'/'.$alias]['language'] : 'N/A' ?></p>
                   </div>
                 </div>
               </div>
@@ -78,12 +78,12 @@
                   </h2>
                   <div class="grid">
                     <?php
-                      if (isset($data['github'][$alias]['languages'])):
+                      if (isset($data['github'][$data['projects'][$alias]['owner'].'/'.$alias]['languages'])):
                         // Increment variable to determine if we need to open a new 1of2 div
                         $languageIncrement = 1;
 
                         // Loop through available languages
-                        foreach ($data['github'][$alias]['languages'] as $language => $percent):
+                        foreach ($data['github'][$data['projects'][$alias]['owner'].'/'.$alias]['languages'] as $language => $percent):
                           // If odd increment count
                           if($languageIncrement%2):
                             // Close div if it's not the first
