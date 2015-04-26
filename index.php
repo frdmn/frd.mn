@@ -1,20 +1,5 @@
 <?php
   /**
-   * Test web server for mod_rewrite compatibility. The HTTP_MOD_REWRITE
-   * constant is set in the .htaccess or Nginx configuartion.
-   *
-   * @return bool
-   */
-
-  function checkForModRewrite(){
-    if(array_key_exists('HTTP_MOD_REWRITE', $_SERVER)) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  /**
    * Returns the full script URL
    *
    * @return string $url
@@ -35,11 +20,7 @@
 
   // Function to construct the project URL, based on checkForModRewrite()
   function prepareProjectURL($project){
-    if (checkForModRewrite()) {
-      return returnFullURL().$project.'.html';
-    } else {
-      return returnFullURL().'project.php/?alias='.$project;
-    }
+    return returnFullURL().$project;
   }
 
   /**
