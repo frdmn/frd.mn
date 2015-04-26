@@ -191,10 +191,19 @@ module.exports = function(grunt) {
             parse: {
                 command: 'php parser.php > data/github.json'
             }
+        },
+
+        // phplint
+        phplint: {
+          options: {
+            stdout: true,
+            stderr: true
+          },
+          files: [ '*.php', 'templates/layouts/*.php', 'templates/pages/*.php' ]
         }
     });
 
-    grunt.registerTask('default', ['sass:build', 'autoprefixer', 'concat', 'uglify', 'imagemin', 'grunticon']);
+    grunt.registerTask('default', ['sass:build', 'autoprefixer', 'concat', 'uglify', 'imagemin', 'grunticon', 'phplint']);
     grunt.registerTask('dev', ['connect', 'watch', 'notify']);
     grunt.registerTask('dev:sync', ['browser_sync', 'watch', 'notify']);
     grunt.registerTask('parse', ['shell:parse']);
