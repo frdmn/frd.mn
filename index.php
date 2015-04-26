@@ -80,7 +80,11 @@
       echo $templates->render('pages/projects', compact('data', 'alias', 'markdown'));
     } else {
       // Doesn't exist, render "error" page
-      echo $templates->render('pages/error', compact('data', 'alias', 'markdown'));
+
+      $error['code'] = 404;
+      $error['message'] = 'Project not found';
+
+      echo $templates->render('pages/error', compact('data', 'alias', 'error'));
     }
   });
 
