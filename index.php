@@ -79,26 +79,25 @@
   // Load JSON data into variable
   $data = loadJSONData();
 
-  // // Check if GET parameter "project" is set, then use "projects" template
-  // if(isset($_GET['project'])) {
-  //   $parser = new \cebe\markdown\Markdown();
-  //   $alias = $_GET['project'];
-
-  //   // Check if project actually exists
-  //   if (isset($data['projects'][$alias])) {
-  //     echo $templates->render('pages/projects', compact('data', 'alias', 'parser'));
-  //   } else {
-  //     // Doesn't exist, render error page
-  //     echo $templates->render('pages/error', compact('data', 'alias', 'parser'));
-  //   }
-  // // Otherwise use "home" template
-  // } else {
-  //   echo $templates->render('pages/home', compact('data'));
-  // }
-
-  $router->respond('GET', '/', function () {
+  // GET / route
+  $router->respond('GET', '/', function () use ($templates, $data)  {
     echo $templates->render('pages/home', compact('data'));
   });
 
+  // GET /project route
+  $router->respond('GET', '/[:project]', function ($request) use ($templates, $data)  {
+    $parser = new \cebe\markdown\Markdown();
+    $alias = $request->project;
+
+    // Check if project actually exists
+    if (isset($data['projects'][$alias])) {
+      echo $templates->render('pages/projects', compact('data', 'alias', 'parser'));
+    } else {
+      // Doesn't exist, render error page
+      echo $templates->render('pages/error', compact('data', 'alias', 'parser'));
+    }
+  });
+
+  // Dispatch router
   $router->dispatch();
 ?>
