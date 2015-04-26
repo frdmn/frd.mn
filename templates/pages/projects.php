@@ -1,13 +1,13 @@
-<?php $this->layout('layouts/default', compact('info', 'projects', 'github', 'alias')) ?>
+<?php $this->layout('layouts/default', compact('data', 'alias')) ?>
       <div class="constrain constrain--max constrain--hero space--top-double space-desk--top-triple space--bottom-double">
         <div class="grid">
           <div class="grid__item width-lap--2of3 width-desk--1of2">
             <h1 class="heading-1 headline headline--upper space--bottom-quarter">
-              <?= $projects[$alias]['name']; ?>
+              <?= $data['projects'][$alias]['name']; ?>
             </h1>
             <div class="constrain constrain--small constrain--text">
               <p class="text--hero space--bottom-double space-lap--bottom-none">
-                <?= $projects[$alias]['description']; ?>
+                <?= $data['projects'][$alias]['description']; ?>
               </p>
             </div>
           </div><!--
@@ -18,26 +18,26 @@
                   <div class="fading-seperator">
                     <div class="labeled-text-hero">
                       <span class="labeled-text-hero__label">Github Repo</span>
-                      <p class="space--bottom-none"><a href="<?= $projects[$alias]['github']; ?>" target="_blank"><?= preg_replace('/https:\/\/github.com\//', '', $projects[$alias]['github']); ?></a></p>
+                      <p class="space--bottom-none"><a href="<?= $data['projects'][$alias]['github']; ?>" target="_blank"><?= preg_replace('/https:\/\/github.com\//', '', $data['projects'][$alias]['github']); ?></a></p>
                     </div>
                   </div>
                 </div><!--
              --><div class="grid__item width--1of4">
                   <div class="labeled-text-hero">
                     <span class="labeled-text-hero__label">Stars</span>
-                    <p class="space--bottom-none"><?= $github[$alias]['stars'] ?></p>
+                    <p class="space--bottom-none"><?= $data['github'][$alias]['stars'] ?></p>
                   </div>
                 </div><!--
              --><div class="grid__item width--1of4">
                   <div class="labeled-text-hero">
                     <span class="labeled-text-hero__label">Forks</span>
-                    <p class="space--bottom-none"><?= $github[$alias]['forks'] ?></p>
+                    <p class="space--bottom-none"><?= $data['github'][$alias]['forks'] ?></p>
                   </div>
                 </div><!--
              --><div class="grid__item width--1of4">
                   <div class="labeled-text-hero">
                     <span class="labeled-text-hero__label">Language</span>
-                    <p class="space--bottom-none"><?= ($github[$alias]['language']) ? $github[$alias]['language'] : 'N/A' ?></p>
+                    <p class="space--bottom-none"><?= ($data['github'][$alias]['language']) ? $data['github'][$alias]['language'] : 'N/A' ?></p>
                   </div>
                 </div>
               </div>
@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="constrain constrain--max text--center">
-        <img class="project-image" src="assets/images/project/<?= $alias; ?>.png" alt="Project: <?= $projects[$alias]['name']; ?>" />
+        <img class="project-image" src="assets/images/project/<?= $alias; ?>.png" alt="Project: <?= $data['projects'][$alias]['name']; ?>" />
       </div>
       <div class="constrain constrain--max">
         <div class="sheet">
@@ -61,13 +61,13 @@
                 <div class="labeled-text__label-wrap">
                   <span class="labeled-text__label">Name</span>
                 </div>
-                <p class="typewriter"><?= $projects[$alias]['name']; ?></p>
+                <p class="typewriter"><?= $data['projects'][$alias]['name']; ?></p>
               </div>
               <div class="labeled-text">
                 <div class="labeled-text__label-wrap">
                   <span class="labeled-text__label">Date</span>
                 </div>
-                <p class="typewriter"><?= explode("-", $projects[$alias]['date'])[0]; ?><span class="typewriter__prefill">—</span><?= explode("-", $projects[$alias]['date'])[1]; ?><span class="typewriter__prefill">—</span><?= explode("-", $projects[$alias]['date'])[2]; ?></p>
+                <p class="typewriter"><?= explode("-", $data['projects'][$alias]['date'])[0]; ?><span class="typewriter__prefill">—</span><?= explode("-", $data['projects'][$alias]['date'])[1]; ?><span class="typewriter__prefill">—</span><?= explode("-", $data['projects'][$alias]['date'])[2]; ?></p>
               </div>
             </div><!--
          --><div class="grid__item width-lap--1of2">
@@ -78,12 +78,12 @@
                   </h2>
                   <div class="grid">
                     <?php
-                      if (isset($github[$alias]['languages'])):
+                      if (isset($data['github'][$alias]['languages'])):
                         // Increment variable to determine if we need to open a new 1of2 div
                         $languageIncrement = 1;
 
                         // Loop through available languages
-                        foreach ($github[$alias]['languages'] as $language => $percent):
+                        foreach ($data['github'][$alias]['languages'] as $language => $percent):
                           // If odd increment count
                           if($languageIncrement%2):
                             // Close div if it's not the first
@@ -123,23 +123,23 @@
           <h2 class="headline headline--upper heading-6 space--top-double">
             <span class="text-group__headline-inner">Additional Info:</span>
           </h2>
-          <?php if (isset($projects[$alias]['additional']['information'])): ?>
+          <?php if (isset($data['projects'][$alias]['additional']['information'])): ?>
             <div class="labeled-text">
               <div class="labeled-text__label-wrap">
                 <span class="labeled-text__label">Detailed Information</span>
               </div>
               <div class="typewriter">
-                <?= $parser->parse($projects[$alias]['additional']['information']); ?>
+                <?= $parser->parse($data['projects'][$alias]['additional']['information']); ?>
               </div>
             </div>
           <?php endif; ?>
-          <?php if (isset($projects[$alias]['additional']['libraries'])): ?>
+          <?php if (isset($data['projects'][$alias]['additional']['libraries'])): ?>
             <div class="labeled-text">
               <div class="labeled-text__label-wrap">
                 <span class="labeled-text__label">Libraries</span>
               </div>
               <ul class="typewriter">
-                <?php foreach ($projects[$alias]['additional']['libraries'] as $library): ?>
+                <?php foreach ($data['projects'][$alias]['additional']['libraries'] as $library): ?>
                   <?php if (isset($library['link'])): ?>
                     <li><?= $library['name']; ?> (<a href="<?= $library['link']; ?>"><?= preg_replace('/http[s]?:\/\//', '', $library['link']); ?></a>)</li>
                   <?php else: ?>
@@ -149,13 +149,13 @@
               </ul>
             </div>
           <?php endif; ?>
-          <?php if (isset($projects[$alias]['additional']['dependencies'])): ?>
+          <?php if (isset($data['projects'][$alias]['additional']['dependencies'])): ?>
             <div class="labeled-text">
               <div class="labeled-text__label-wrap">
                 <span class="labeled-text__label">Dependencies</span>
               </div>
               <ul class="typewriter">
-                <?php foreach ($projects[$alias]['additional']['dependencies'] as $dependency): ?>
+                <?php foreach ($data['projects'][$alias]['additional']['dependencies'] as $dependency): ?>
                   <?php if (isset($dependency['link'])): ?>
                     <li><?= $dependency['name']; ?> (<a href="<?= $dependency['link']; ?>"><?= preg_replace('/http[s]?:\/\//', '', $dependency['link']); ?></a>)</li>
                   <?php else: ?>
@@ -165,13 +165,13 @@
               </ul>
             </div>
           <?php endif; ?>
-          <?php if (isset($projects[$alias]['additional']['license'])): ?>
+          <?php if (isset($data['projects'][$alias]['additional']['license'])): ?>
             <div class="labeled-text">
               <div class="labeled-text__label-wrap">
                 <span class="labeled-text__label">License</span>
               </div>
               <div class="typewriter">
-                <p><a href="<?= $projects[$alias]['github']; ?>/blob/master/LICENSE" target="_blank"><?= $projects[$alias]['additional']['license']; ?></a></p>
+                <p><a href="<?= $data['projects'][$alias]['github']; ?>/blob/master/LICENSE" target="_blank"><?= $data['projects'][$alias]['additional']['license']; ?></a></p>
               </div>
             </div>
           <?php endif; ?>

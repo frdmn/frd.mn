@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title><?= $info['about']['username']; ?><?= (isset($_GET['alias'])) ? ' / '.$_GET['alias'] : '' ?></title>
+  <title><?= $data['info']['about']['username']; ?><?= (isset($alias)) ? ' / '.$alias : '' ?></title>
 
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,11 +56,11 @@
 
       <footer class="site-footer">
         <ul class="nav nav--slash">
-          <li><a href="<?php echo $info['contact']['mail']['link']; ?>">Contact</a></li>
+          <li><a href="<?php echo $data['info']['contact']['mail']['link']; ?>">Contact</a></li>
         </ul>
       </footer>
     </div>
-    <div class="copyright">© 2015 <?php echo $info['about']['name']; ?></div>
+    <div class="copyright">© 2015 <?php echo $data['info']['about']['name']; ?></div>
   </div>
 
   <script src="assets/js/build.js"></script>

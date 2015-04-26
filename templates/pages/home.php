@@ -1,4 +1,4 @@
-<?php $this->layout('layouts/default', compact('info', 'projects')) ?>
+<?php $this->layout('layouts/default', compact('data', 'alias')) ?>
   <div class="constrain constrain--max">
     <div class="sheet">
       <div class="headline-wrap">
@@ -12,21 +12,21 @@
             <div class="labeled-text__label-wrap">
               <span class="labeled-text__label">Name</span>
             </div>
-            <p class="typewriter"><?= $info['about']['name']; ?></p>
+            <p class="typewriter"><?= $data['info']['about']['name']; ?></p>
           </div>
 
           <div class="labeled-text">
             <div class="labeled-text__label-wrap">
               <span class="labeled-text__label">City of Residence</span>
             </div>
-            <p class="typewriter"><?= $info['about']['city']; ?></p>
+            <p class="typewriter"><?= $data['info']['about']['city']; ?></p>
           </div>
 
           <div class="labeled-text">
             <div class="labeled-text__label-wrap">
               <span class="labeled-text__label">Biography</span>
             </div>
-            <p class="typewriter"><?= $info['about']['bio']; ?></p>
+            <p class="typewriter"><?= $data['info']['about']['bio']; ?></p>
           </div>
         </div><!--
      --><div class="grid__item width-lap--1of2">
@@ -41,13 +41,13 @@
                     <div class="labeled-text__label-wrap">
                       <span class="labeled-text__label">E-Mail</span>
                     </div>
-                    <p class="typewriter"><a href="<?= $info['contact']['mail']['link']; ?>"><?= $info['contact']['mail']['title']; ?></a>*</p>
+                    <p class="typewriter"><a href="<?= $data['info']['contact']['mail']['link']; ?>"><?= $data['info']['contact']['mail']['title']; ?></a>*</p>
                   </div>
                   <div class="labeled-text">
                     <div class="labeled-text__label-wrap">
                       <span class="labeled-text__label">Blog</span>
                     </div>
-                    <p class="typewriter"><a href="<?= $info['contact']['blog']['link']; ?>"><?= $info['contact']['blog']['title']; ?></a></p>
+                    <p class="typewriter"><a href="<?= $data['info']['contact']['blog']['link']; ?>"><?= $data['info']['contact']['blog']['title']; ?></a></p>
                   </div>
 
                 </div><!--
@@ -56,13 +56,13 @@
                     <div class="labeled-text__label-wrap">
                       <span class="labeled-text__label">Twitter</span>
                     </div>
-                    <p class="typewriter"><a href="<?= $info['contact']['twitter']['link']; ?>"><?= $info['contact']['twitter']['title']; ?></a></p>
+                    <p class="typewriter"><a href="<?= $data['info']['contact']['twitter']['link']; ?>"><?= $data['info']['contact']['twitter']['title']; ?></a></p>
                   </div>
                   <div class="labeled-text">
                     <div class="labeled-text__label-wrap">
                       <span class="labeled-text__label">Keybase</span>
                     </div>
-                    <p class="typewriter"><a href="<?= $info['contact']['keybase']['link']; ?>"><?= $info['contact']['keybase']['title']; ?></a></p>
+                    <p class="typewriter"><a href="<?= $data['info']['contact']['keybase']['link']; ?>"><?= $data['info']['contact']['keybase']['title']; ?></a></p>
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@
             <h4 class="headline headline--label space--bottom-none">Category</h4>
           </div>
         </div>
-        <?php foreach ($projects as $project): ?>
+        <?php foreach ($data['projects'] as $project): ?>
           <div class="project-table__row">
             <div class="project-table__date">
               <p class="typewriter space--bottom-none"><?= explode("-", $project['date'])[0]; ?><span class="typewriter__prefill">—</span><?= explode("-", $project['date'])[1]; ?><span class="typewriter__prefill">—</span><?= explode("-", $project['date'])[2]; ?></p>
