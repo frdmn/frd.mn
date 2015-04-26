@@ -55,19 +55,32 @@
   $templates = new League\Plates\Engine('templates');
 
   // Create new Klein router instance
-  $router = new \Klein\Klein();
+  $router = new Klein\Klein();
 
   // Load JSON data into variable
   $data = loadJSONData();
 
-  // GET "/" route
+  /**
+   * Route for home page
+   *
+   * @uses Klein\Klein::respond()
+   * @example http://frd.mn/
+   */
+
   $router->respond('GET', '/', function () use ($templates, $data)  {
     // Render "home" page
     echo $templates->render('pages/home', compact('data'));
   });
 
-  // GET "/project" route
-  $router->respond('GET', '/[:project]', function ($request) use ($templates, $data)  {
+  /**
+   * Route for project page
+   *
+   * @uses Klein\Klein::respond()
+   * @example http://frd.mn/test-project
+   * @param string $project
+   */
+
+   $router->respond('GET', '/[:project]', function ($request) use ($templates, $data)  {
 
     // Create new Markdown parser instance
     $markdown = new \cebe\markdown\Markdown();
@@ -79,11 +92,11 @@
       // Render "projects" page
       echo $templates->render('pages/projects', compact('data', 'alias', 'markdown'));
     } else {
-      // Doesn't exist, render "error" page
-
+      // Create error array
       $error['code'] = 404;
       $error['message'] = 'Project not found';
 
+      // Render "error" page
       echo $templates->render('pages/error', compact('data', 'alias', 'error'));
     }
   });
