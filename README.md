@@ -10,7 +10,8 @@ Repository of my personal website / project portfolio.
 
 1. Make sure you've installed all requirements
 2. Clone this repository:  
-  `git clone https://github.com/frdmn/frd.mn`
+  `git clone https://github.com/frdmn/frd.mn`  
+  `cd frd.mn`  
 3. Install all dependencies and libraries:  
   `npm install`  
   `bower install`  
