@@ -4,5 +4,5 @@
   RewriteEngine on
   Options +FollowSymLinks
   RewriteEngine On
-  RewriteRule ^(.*)\.html$ /project.php?alias=$1
+  RewriteRule ^(.*)\.html$ /index.php?alias=$1
 </IfModule>

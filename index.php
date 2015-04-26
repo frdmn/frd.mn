@@ -1,108 +1,78 @@
 <?php
-  include __DIR__.'/includes/_header.php';
-?>
-<div class="constrain constrain--max">
-  <div class="sheet">
-    <div class="headline-wrap">
-      <h1 class="headline heading-3 headline--upper space--bottom-double space-desk-wide--bottom-triple headline--wavy">Information</h1>
-    </div>
-    <div class="grid grid--large">
+  // Functions
 
-      <div class="grid__item width-lap--1of2">
-        <h2 class="headline headline--upper heading-6">About:</h2>
-        <div class="labeled-text">
-          <div class="labeled-text__label-wrap">
-            <span class="labeled-text__label">Name</span>
-          </div>
-          <p class="typewriter"><?= $info['about']['name']; ?></p>
-        </div>
+  /**
+   * Test web server for mod_rewrite compatibility. The HTTP_MOD_REWRITE
+   * constant is set in the .htaccess or Nginx configuartion.
+   *
+   * @return bool
+   */
 
-        <div class="labeled-text">
-          <div class="labeled-text__label-wrap">
-            <span class="labeled-text__label">City of Residence</span>
-          </div>
-          <p class="typewriter"><?= $info['about']['city']; ?></p>
-        </div>
+  function checkForModRewrite(){
+    if(array_key_exists('HTTP_MOD_REWRITE', $_SERVER)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
-        <div class="labeled-text">
-          <div class="labeled-text__label-wrap">
-            <span class="labeled-text__label">Biography</span>
-          </div>
-          <p class="typewriter"><?= $info['about']['bio']; ?></p>
-        </div>
-      </div><!--
-   --><div class="grid__item width-lap--1of2">
-        <div class="space--top-double space-lap--top-none">
-          <div class="text-group">
-            <h2 class="headline text-group__headline headline--upper heading-6">
-              <span class="text-group__headline-inner">Contact:</span>
-            </h2>
-            <div class="grid">
-              <div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">
-                <div class="labeled-text">
-                  <div class="labeled-text__label-wrap">
-                    <span class="labeled-text__label">E-Mail</span>
-                  </div>
-                  <p class="typewriter"><a href="<?= $info['contact']['mail']['link']; ?>"><?= $info['contact']['mail']['title']; ?></a>*</p>
-                </div>
-                <div class="labeled-text">
-                  <div class="labeled-text__label-wrap">
-                    <span class="labeled-text__label">Blog</span>
-                  </div>
-                  <p class="typewriter"><a href="<?= $info['contact']['blog']['link']; ?>"><?= $info['contact']['blog']['title']; ?></a></p>
-                </div>
+  /**
+   * Returns the full script URL
+   *
+   * @return string $url
+   */
 
-              </div><!--
-           --><div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">
-                <div class="labeled-text">
-                  <div class="labeled-text__label-wrap">
-                    <span class="labeled-text__label">Twitter</span>
-                  </div>
-                  <p class="typewriter"><a href="<?= $info['contact']['twitter']['link']; ?>"><?= $info['contact']['twitter']['title']; ?></a></p>
-                </div>
-                <div class="labeled-text">
-                  <div class="labeled-text__label-wrap">
-                    <span class="labeled-text__label">Keybase</span>
-                  </div>
-                  <p class="typewriter"><a href="<?= $info['contact']['keybase']['link']; ?>"><?= $info['contact']['keybase']['title']; ?></a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  function returnFullURL(){
+    return ((empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') ? 'http://' : 'https://').$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']);
+  }
 
-    <div class="headline-wrap space--top-double">
-      <h1 class="headline heading-3 headline--upper headline--wavy space-lap--bottom-none">Projects</h1>
-    </div>
+  /**
+   * Function to construct the project URL based on the return status of
+   * checkForModRewrite(). If true the function will return a pretty URL
+   * otherwise it'll return a URL with GET parameters.
+   *
+   * @param string $project
+   * @return string $url
+   */
 
-    <div class="project-table">
-      <div class="project-table__row project-table__row--header">
-        <div class="project-table__date">
-          <h4 class="headline headline--label space--bottom-none">Date</h4>
-        </div>
-        <div class="project-table__title">
-          <h4 class="headline headline--label space--bottom-none">Title</h4>
-        </div>
-        <div class="project-table__category">
-          <h4 class="headline headline--label space--bottom-none">Category</h4>
-        </div>
-      </div>
-      <?php foreach ($projects as $project): ?>
-        <div class="project-table__row">
-          <div class="project-table__date">
-            <p class="typewriter space--bottom-none"><?= explode("-", $project['date'])[0]; ?><span class="typewriter__prefill">—</span><?= explode("-", $project['date'])[1]; ?><span class="typewriter__prefill">—</span><?= explode("-", $project['date'])[2]; ?></p>
-          </div>
-          <div class="project-table__title">
-            <p class="typewriter space--bottom-none"><a href="<?= prepareProjectURL($project['alias']); ?>"><?= $project['name']; ?></a></p>
-          </div>
-          <div class="project-table__category">
-            <p class="typewriter space--bottom-none"><?= $project['category']; ?></p>
-          </div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-<?php
-  include __DIR__.'/includes/_footer.php';
+  // Function to construct the project URL, based on checkForModRewrite()
+  function prepareProjectURL($project){
+    if (checkForModRewrite()) {
+      return returnFullURL().$project.'.html';
+    } else {
+      return returnFullURL().'project.php/?alias='.$project;
+    }
+  }
+
+  // Logic
+
+  // This file is generated by Composer
+  require_once 'vendor/autoload.php';
+
+  // Create new Plates instance and map template folders
+  $templates = new League\Plates\Engine('templates');
+
+  $info_file = file_get_contents("data/info.json");
+  $github_file = file_get_contents("data/github.json");
+
+  $info_json = json_decode($info_file, true);
+  $github_json = json_decode($github_file, true);
+
+  $info = $info_json['information'];
+  $projects = $info_json['projects'];
+  $github = $github_json['projects'];
+
+  if(isset($_GET['alias'])) {
+    $parser = new \cebe\markdown\Markdown();
+    $alias = $_GET['alias'];
+
+    if (isset($projects[$alias])) {
+      echo $templates->render('pages/projects', compact('info', 'projects', 'github', 'alias', 'parser'));
+    } else {
+      echo $templates->render('pages/error', compact('info', 'projects', 'alias', 'parser'));
+    }
+
+  } else {
+    echo $templates->render('pages/home', compact('info', 'projects'));
+  }
 ?>

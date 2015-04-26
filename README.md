@@ -37,7 +37,7 @@ The project contains a `.htaccess` file in case you run Apache with enabled `All
 
 ```
 fastcgi_param HTTP_MOD_REWRITE On;
-rewrite ^(.*)\.html$ /project.php?alias=$1;
+rewrite ^(.*)\.html$ /index.php?alias=$1;
 ```
 
 ## Requirements / Dependencies

@@ -1,3 +1,4 @@
+<?php $this->layout('layouts/default', compact('info', 'projects')) ?>
 <div class="constrain constrain--max">
   <div class="sheet">
     <div class="headline-wrap">
