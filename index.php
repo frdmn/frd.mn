@@ -18,7 +18,6 @@
    * @return string $url
    */
 
-  // Function to construct the project URL, based on checkForModRewrite()
   function prepareProjectURL($project){
     return returnFullURL().$project;
   }
@@ -80,8 +79,7 @@
    * @param string $project
    */
 
-   $router->respond('GET', '/[:project]', function ($request) use ($templates, $data)  {
-
+  $router->respond('GET', '/[:project]', function ($request) use ($templates, $data)  {
     // Create new Markdown parser instance
     $markdown = new \cebe\markdown\Markdown();
     // Store "project" request
