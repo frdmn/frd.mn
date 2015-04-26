@@ -81,7 +81,7 @@
 
   $router->respond('GET', '/[:project]', function ($request, $response) use ($templates, $data)  {
     // Create new Markdown parser instance
-    $markdown = new \cebe\markdown\Markdown();
+    $markdown = new cebe\markdown\Markdown();
     // Store "project" request
     $alias = $request->project;
 
