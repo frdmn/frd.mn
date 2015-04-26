@@ -28,7 +28,7 @@ Repository of my personal website / project portfolio.
 
 ```sh
 $ curl -sS https://getcomposer.org/installer | php
-$ mv composer.phar /usr/local/bin
+$ mv composer.phar /usr/local/bin/composer
 ```
 
 ### Pretty URLs / rewrites
