@@ -27,7 +27,12 @@
         "title": "blog.frd.mn",
         "link": "http://blog.frd.mn"
       }
-    }
+    },
+    "github-organizations": [
+      "BanManagement",
+      "gta5-map",
+      "yeahwhat-mc"
+    ]
   },
   "projects": {
     "alfred-dongers": {

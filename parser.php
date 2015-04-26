@@ -14,13 +14,11 @@
     return $count;
   }
 
+  // Load portfolio data
+  $info_json = json_decode(file_get_contents("data/info.json"), true);
+
   // Store GitHub username and organizations to work with
-  $githubUsernames = [
-    'frdmn',
-    'BanManagement',
-    'gta5-map',
-    'yeahwhat-mc'
-  ];
+  $githubUsernames = array_merge(array($info_json['information']['about']['username']), $info_json['information']['github-organizations']);
 
   // Initiate API client
   $client = new \Github\Client();
