@@ -79,7 +79,7 @@
    * @param string $project
    */
 
-  $router->respond('GET', '/[:project]', function ($request) use ($templates, $data)  {
+  $router->respond('GET', '/[:project]', function ($request, $response) use ($templates, $data)  {
     // Create new Markdown parser instance
     $markdown = new \cebe\markdown\Markdown();
     // Store "project" request
@@ -93,6 +93,9 @@
       // Create error array
       $error['code'] = 404;
       $error['message'] = 'Project not found';
+
+      // Set 404 HTTP status
+      $response->code(404);
 
       // Render "error" page
       echo $templates->render('pages/error', compact('data', 'alias', 'error'));
