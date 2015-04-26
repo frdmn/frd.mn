@@ -54,28 +54,32 @@
   // Create new Plates instance and map template folders
   $templates = new League\Plates\Engine('templates');
 
-  // Create router instance
+  // Create new Klein router instance
   $router = new \Klein\Klein();
 
   // Load JSON data into variable
   $data = loadJSONData();
 
-  // GET / route
+  // GET "/" route
   $router->respond('GET', '/', function () use ($templates, $data)  {
+    // Render "home" page
     echo $templates->render('pages/home', compact('data'));
   });
 
-  // GET /project route
+  // GET "/project" route
   $router->respond('GET', '/[:project]', function ($request) use ($templates, $data)  {
 
+    // Create new Markdown parser instance
     $markdown = new \cebe\markdown\Markdown();
+    // Store "project" request
     $alias = $request->project;
 
     // Check if project actually exists
     if (isset($data['projects'][$alias])) {
+      // Render "projects" page
       echo $templates->render('pages/projects', compact('data', 'alias', 'markdown'));
     } else {
-      // Doesn't exist, render error page
+      // Doesn't exist, render "error" page
       echo $templates->render('pages/error', compact('data', 'alias', 'markdown'));
     }
   });
