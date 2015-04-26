@@ -36,8 +36,9 @@ $ mv composer.phar /usr/local/bin
 The project contains a `.htaccess` file in case you run Apache with enabled `AllowOverride`. In case you run Nginx you can use the following rewrite directive for your server block configuration:
 
 ```
-fastcgi_param HTTP_MOD_REWRITE On;
-rewrite ^(.*)\.html$ /index.php?alias=$1;
+location / {
+   try_files $uri $uri/ /index.php?$args;
+}
 ```
 
 ## Requirements / Dependencies
