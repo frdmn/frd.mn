@@ -13,9 +13,8 @@
   }
 
   /**
-   * Function to construct the project URL based on the return status of
-   * checkForModRewrite(). If true the function will return a pretty URL
-   * otherwise it'll return a URL with GET parameters.
+   * Function to construct the absolute project URL. Makes use of the
+   * returnFullURL() function.
    *
    * @param string $project
    * @return string $url
