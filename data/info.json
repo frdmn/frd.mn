@@ -44,7 +44,7 @@
       "description": "Alfred workflow to list unicode emoticons easily ໒(”•̀ᗜ•́”)७",
       "github": "https://github.com/frdmn/alfred-dongers",
       "additional": {
-        "information": "Alfred workflow to quickly browse through dongers via [dongerlist.com](http://dongerlist.com/).",
+        "information": "Alfred workflow to quickly search and browse through unicode dongers via [dongerlist.com](http://dongerlist.com/). ╰|⁰෴⁰|╯\n\nYou can optionally list possible categories as well as show dongers out of a specific category by passing either \"list\" or \"[category]\" as second argument.",
         "license": "WTFPL",
         "dependencies": [
           {
@@ -60,14 +60,13 @@
       "alias": "pushbullet-osx-services",
       "category": "scripts",
       "date": "2014-10-18",
-      "description": "A few services to push stuff to Pushbullet",
+      "description": "A Mac OS X services to push stuff to Pushbullet",
       "github": "https://github.com/frdmn/pushbullet-osx-services",
       "additional": {
-        "information": false,
+        "information": "Since the Mac OS X application for [Pushbullet](https://www.pushbullet.com/) ~~doesn't exist yet~~ is rather wonky, I thought about creating a simple workflow to quickly push images and text selections to your Pushbullet account just by using the right mouse click.\n\nMake sure you've added your API key in \"~/.pushbullet_apikey\".",
         "libraries": [
           {
-            "name": "Bork",
-            "link": "https://github.com/mattly/bork"
+            "name": "Automator.app"
           }
         ],
         "dependencies": [
@@ -87,8 +86,13 @@
       "description": "Get notified as soon as a host is responding to ping.",
       "github": "https://github.com/frdmn/uping",
       "additional": {
-        "information": "(up)ing is a simple Bash script to get notified as soon as a currently offline host is reachable again.",
-        "license": "WTFPL"
+        "information": "(up)ing is a dead simple Bash script that continuously pings an host and let's you know as soon as its online or reachable (responding to ICMP ping) again. \n\nBonus if you are on a Mac and have \"terminal-notifier\" installed: native OS X notifications through the Notification Center!",
+        "license": "WTFPL",
+        "libraries": [
+          {
+            "name": "terminal-notifier (optional)"
+          }
+        ]
       }
     },
     "alfred-ciscocall": {
@@ -100,7 +104,7 @@
       "description": "Alfred workflow to search for phone numbersthrough LDAP",
       "github": "https://github.com/frdmn/alfred-ciscocall",
       "additional": {
-        "information": "Alfred workflow to search for telephone numbers of coworkers through an Active Directory/LDAP directory.",
+        "information": "Another Alfred.app workflow to quickly call or dial phone numbers on your Cisco IP phone via your Mac.\n\nYou might also want to checkout the sister workflow: [alfred-ldap](http://frd.mn/alfred-ldap)",
         "license": "WTFPL",
         "dependencies": [
           {
@@ -122,7 +126,7 @@
       "description": "Postfix, Dovecot, Roundcube and ViMbAdmin in a Docker boat",
       "github": "https://github.com/frdmn/docker-mailbox",
       "additional": {
-        "information": "Docker image that ships a running Nginx/PHP, Dovecot, Postfix as well as ViMbAdmin to configure and maintain the mail server.\n\nThis project is a work in progess, don't use it in production!",
+        "information": "Docker image that ships a running Nginx/PHP, Dovecot, Postfix as well as ViMbAdmin web interface to manage and maintain the user accounts as well as the domain names.\n\nThis project is a work in progess, don't use it in production!",
         "dependencies": [
           {
             "name": "Docker",
@@ -157,7 +161,7 @@
       "description": "Alfred workflow to search for phone numbersthrough LDAP",
       "github": "https://github.com/frdmn/alfred-ldap",
       "additional": {
-        "information": "Alfred workflow to search for telephone numbers of coworkers through an Active Directory/LDAP directory.",
+        "information": "Alfred workflow to search for telephone numbers of coworkers through an Active Directory/LDAP directory.\n\nYou might also want to checkout the sister workflow: [alfred-ciscocal](http://frd.mn/alfred-ciscocal)",
         "license": "WTFPL",
         "dependencies": [
           {
