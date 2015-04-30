@@ -35,6 +35,24 @@
     ]
   },
   "projects": {
+    "tar-multibackup": {
+      "owner": "frdmn",
+      "name": "tar-multibackup",
+      "alias": "tar-multibackup",
+      "category": "Script",
+      "date": "2015-03-09",
+      "description": "Bash script to backup and cycle tar archives",
+      "github": "https://github.com/frdmn/tar-multibackup",
+      "additional": {
+        "information": "Bash script to backup multiple folders and to clean up old backups based on a retention time. Some of the features: configurable post/pre-commands, tar excludes as well as retention.",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "/usr/bin/tar"
+          }
+        ]
+      }
+    },
     "alfred-dongers": {
       "owner": "frdmn",
       "name": "alfred-dongers",
