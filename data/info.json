@@ -291,6 +291,7 @@
       "github": "https://github.com/frdmn/CommuniGate-scripts",
       "additional": {
         "license": "MIT",
+        "information": "Two little Perl scripts for CommuniGate Pro:\n\n__listAndVerifyPasswords:__  \nThis script lists all accounts and their specific (plaintext if possible) passwords.\n\n__bulkUpdatePasswords__:  \nThis script is useful in case you updated CommuniGate's default password encryption method. It'll update every single e-mail account without changing the current password. This way you can bulk update ALL exisiting mail accounts.",
         "dependencies": [
           {
             "name": "CommuniGate Pro",
@@ -359,7 +360,7 @@
       "description": "Bash script to control the lights in my office",
       "github": "https://github.com/frdmn/GiraHelper",
       "additional": {
-        "information": "Dead simple Bash script to talk to a Gira home server.",
+        "information": "Dead simple Bash script to talk to a Gira home server and toggle power outlets (office lights in my case). that speaks TCP (or actually HTTP). It knows TCP (actually HTTP) very well.",
         "license": "MIT",
         "dependencies": [
           {
