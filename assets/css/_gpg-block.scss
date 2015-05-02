@@ -1,0 +1,28 @@
+.gpg-block {
+  position: relative;
+  @include font-size(13px);
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    height: 10px;
+  }
+  &:before {
+    top: 0;
+    background: linear-gradient(to top, rgba(255,255,255,0), #fff);
+  }
+
+  &:after {
+    bottom: 8px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), #fff);
+  }
+  textarea {
+    border: none;
+    height: 300px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
