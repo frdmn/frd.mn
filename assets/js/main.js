@@ -29,4 +29,8 @@ $(function() {
 
   var gpgModal = new Modal(gpg);
 
+  $('.wobbly-eyes-hover').mouseenter(function() {
+    $('.wobbly-eyes').toggleClass('wobbly-eyes--right');
+  });
+
 });

@@ -1,0 +1,87 @@
+.wobbly-eyes {
+  position: relative;
+  background: url(../images/wobbly-eyes-left.png) no-repeat center center;
+  background-size: 100% auto;
+  transition: .1s .1s;
+  margin: $baseUnit;
+  &--right {
+    background: url(../images/wobbly-eyes-right.png) no-repeat center center;
+    background-size: 100% auto;
+  }
+
+  width: 20px;
+  height: 14px;
+  margin: 0 auto;
+  margin-bottom: $baseUnit/4;
+  &__lid-left,
+  &__lid-right {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    width: 8px;
+    overflow: hidden;
+    border-radius: 100%;
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      height: 50%;
+      left: 0;
+      right: 0;
+      background: #fff;
+    }
+    &:before {
+      top: -100%;
+    }
+    &:after {
+      bottom: -100%;
+    }
+  }
+  &__lid-left {
+    left: 1px;
+  }
+
+  &__lid-right {
+    right: 1px;
+  }
+}
+
+@keyframes down {
+  0% {
+    top: -100%;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+@keyframes up {
+  0% {
+    bottom: -100%;
+  }
+  50% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -100%;
+  }
+}
+
+.wobbly-eyes-hover:hover {
+  .wobbly-eyes__lid-left,
+  .wobbly-eyes__lid-right {
+    &:before {
+      animation-duration: .2s;
+      animation-name: down;
+      animation-iteration-count: 1;
+    }
+    &:after {
+      animation-duration: .2s;
+      animation-name: up;
+      animation-iteration-count: 1;
+    }
+  }
+}

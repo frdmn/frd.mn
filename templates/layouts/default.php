@@ -61,7 +61,7 @@
         </ul>
       </footer>
     </div>
-    <div class="copyright">👀<br> © 2015 <?php echo $data['info']['about']['url']; ?></div>
+    <div class="copyright wobbly-eyes-hover"><div class="wobbly-eyes"><div class="wobbly-eyes__lid-left"></div><div class="wobbly-eyes__lid-right"></div></div>© 2015 <?php echo $data['info']['about']['url']; ?></div>
   </div>
   <div id="legal-content" class="modal-content">
     <h6 class="headline headline--upper heading-4">Legal Disclosure</h6>
