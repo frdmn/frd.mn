@@ -52,7 +52,7 @@
   <script src="assets/js/modernizr.js"></script>
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header space--bottom-double space-lap--bottom-triple">
     <div class="constrain constrain--max">
       <div class="grid">
         <div class="grid__item width-tab--1of2 text--center text-tab--left">
