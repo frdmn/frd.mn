@@ -1,6 +1,10 @@
 .site-footer {
-  padding-top: $baseUnit*4;
-  margin-top: $baseUnit*4;
+  padding-top: $baseUnit*3;
+  margin-top: $baseUnit*3;
+  @include media($breakDesktopWide) {
+    padding-top: $baseUnit*4;
+    margin-top: $baseUnit*4;
+  }
   text-align: center;
   position: relative;
   &:before {
