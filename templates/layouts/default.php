@@ -57,10 +57,11 @@
       <footer class="site-footer">
         <ul class="nav nav--slash">
           <li><a href="<?php echo $data['info']['contact']['mail']['link']; ?>">Contact</a></li>
+          <li><a href="#" class="modal">Imprint</a></li>
         </ul>
       </footer>
     </div>
-    <div class="copyright">© 2015 <?php echo $data['info']['about']['name']; ?></div>
+    <div class="copyright">👀<br> © 2015 <?php echo $data['info']['about']['url']; ?></div>
   </div>
 
   <script src="assets/js/build.js"></script>
@@ -76,4 +77,3 @@
   </script>
 </body>
 </html>
-
