@@ -14,4 +14,19 @@ $(function() {
 
   var legalModal = new Modal(legal);
 
+  var gpg = {};
+  gpg.modal = '.open-gpg';
+  gpg.content = document.getElementById('gpg-content').innerHTML;
+  gpg.template = '<div class="modal">{{content}}</div>';
+  gpg.callback = function() {
+    $(".modal .gpg-block textarea").focus(function() {
+      var $this = $(this);
+      setTimeout(function() {
+        $this.select();
+      }, 100);
+    });
+  };
+
+  var gpgModal = new Modal(gpg);
+
 });
