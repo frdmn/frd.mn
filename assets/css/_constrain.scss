@@ -6,12 +6,12 @@
 }
 
 .constrain--hero {
-  padding: 0 $baseUnit;
+  padding: $baseUnit $baseUnit 0 ;
   @include media($breakLaptop) {
-    padding: 0 $baseUnit*2;
+    padding: $baseUnit $baseUnit*2 0 ;
   }
   @include media($breakDesktopWide) {
-    padding: 0 $baseUnit*6;
+    padding: $baseUnit $baseUnit*6 $baseUnit*2;
   }
 }
 

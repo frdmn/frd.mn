@@ -1,5 +1,5 @@
 <?php $this->layout('layouts/default', compact('data', 'alias')) ?>
-      <div class="constrain constrain--max constrain--hero space--bottom-double">
+      <div class="constrain constrain--max constrain--hero space--bottom">
         <div class="grid">
           <div class="grid__item width-lap--2of3 width-desk--1of2">
             <h1 class="heading-1 headline headline--upper space--bottom-quarter">
