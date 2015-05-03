@@ -24,7 +24,7 @@
   $client->authenticate(getenv('GITHUB_API_TOKEN'), null, Github\Client::AUTH_HTTP_TOKEN);
 
   foreach ($info_json['projects'] as $name => $project) {
-    $repository = $client->api('repo')->show('KnpLabs', 'php-github-api');
+    $repository = $client->api('repo')->show($project['owner'], $project['alias']);
 
     $json_prepare['projects'][$project['owner'].'/'.$project['alias']]['name'] = $repository['name'];
     $json_prepare['projects'][$project['owner'].'/'.$project['alias']]['description'] = $repository['description'];
