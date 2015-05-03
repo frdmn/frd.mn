@@ -2,7 +2,7 @@
   position: relative;
   background: url(../images/wobbly-eyes-left.png) no-repeat center center;
   background-size: 100% auto;
-  transition: .1s .1s;
+  transition: 0s .1s;
   margin: $baseUnit;
   &--right {
     background: url(../images/wobbly-eyes-right.png) no-repeat center center;
@@ -17,7 +17,7 @@
   &__lid-right {
     position: absolute;
     top: 1px;
-    bottom: 1px;
+    bottom: 2px;
     width: 8px;
     overflow: hidden;
     border-radius: 100%;
@@ -25,16 +25,19 @@
     &:after {
       position: absolute;
       content: '';
-      height: 50%;
+      height: 60%;
       left: 0;
       right: 0;
       background: #fff;
     }
     &:before {
       top: -100%;
+      box-shadow: 0 1px 1px rgba(0,0,0,.2), 0 1px 0 rgba(0,0,0,.2);
     }
     &:after {
+      height: 40%;
       bottom: -100%;
+      box-shadow: 0 -1px 1px rgba(0,0,0,.2), 0 -1px 0 rgba(0,0,0,.2);
     }
   }
   &__lid-left {
@@ -82,6 +85,13 @@
       animation-duration: .2s;
       animation-name: up;
       animation-iteration-count: 1;
+    }
+  }
+
+  .wobbly-eyes__lid-right {
+    &:before,
+    &:after {
+      animation-delay: .02s;
     }
   }
 }
