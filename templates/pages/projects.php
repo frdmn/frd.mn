@@ -80,21 +80,9 @@
                     <span class="text-group__headline-inner">Language Detail:</span>
                   </h2>
                   <div class="grid">
-                    <?php
-                      if (isset($data['github'][$data['projects'][$alias]['owner'].'/'.$alias]['languages'])):
-                        // Increment variable to determine if we need to open a new 1of2 div
-                        $languageIncrement = 1;
-
-                        // Loop through available languages
-                        foreach ($data['github'][$data['projects'][$alias]['owner'].'/'.$alias]['languages'] as $language => $percent):
-                          // If odd increment count
-                          if($languageIncrement%2):
-                            // Close div if it's not the first
-                            echo $languageIncrement > 0 ? '</div>' : '';
-                            // Start new 1of2 grid container
-                            echo '<div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">';
-                          endif;
-                          ?>
+                    <?php if (isset($data['github'][$data['projects'][$alias]['owner'].'/'.$alias]['languages'])): ?>
+                      <?php foreach ($data['github'][$data['projects'][$alias]['owner'].'/'.$alias]['languages'] as $language => $percent):
+                        ?><div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">
 
                           <div class="labeled-text">
                             <div class="labeled-text__label-wrap">
@@ -102,21 +90,18 @@
                             </div>
                             <p class="typewriter"><?= $percent ?>%</p>
                           </div>
-
-                          <?php
-                          // Increment variable
-                          $languageIncrement++;
-                        endforeach;
-                      else: ?>
-                          <div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">
-                            <div class="labeled-text">
-                              <div class="labeled-text__label-wrap">
-                                <span class="labeled-text__label">N/A</span>
-                              </div>
-                              <p class="typewriter">??%</p>
-                            </div>
-                          </div><?php
-                      endif; ?>
+                        </div><?php
+                      endforeach; ?>
+                    <?php else:
+                      ?><div class="grid__item">
+                        <div class="labeled-text">
+                          <div class="labeled-text__label-wrap">
+                            <span class="labeled-text__label">N/A</span>
+                          </div>
+                          <p class="typewriter">??%</p>
+                        </div>
+                      </div><?php
+                    endif; ?>
                   </div>
                 </div>
               </div>

@@ -100,13 +100,6 @@ Ppgyg2/gU4xp3dshaf3sKGg8jeg=
                       </textarea></pre>
                     </div>
                   </div>
-                  <div class="labeled-text">
-                    <div class="labeled-text__label-wrap">
-                      <span class="labeled-text__label">Blog</span>
-                    </div>
-                    <p class="typewriter"><a href="<?= $data['info']['contact']['blog']['link']; ?>"><?= $data['info']['contact']['blog']['title']; ?></a></p>
-                  </div>
-
                 </div><!--
              --><div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">
                   <div class="labeled-text">
@@ -115,6 +108,17 @@ Ppgyg2/gU4xp3dshaf3sKGg8jeg=
                     </div>
                     <p class="typewriter"><a href="<?= $data['info']['contact']['twitter']['link']; ?>"><?= $data['info']['contact']['twitter']['title']; ?></a></p>
                   </div>
+
+                </div><!--
+             --><div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">
+                  <div class="labeled-text">
+                    <div class="labeled-text__label-wrap">
+                      <span class="labeled-text__label">Blog</span>
+                    </div>
+                    <p class="typewriter"><a href="<?= $data['info']['contact']['blog']['link']; ?>"><?= $data['info']['contact']['blog']['title']; ?></a></p>
+                  </div>
+                </div><!--
+             --><div class="grid__item width-tab--1of2 width-lap--1of1 width-desk-wide--1of2">
                   <div class="labeled-text">
                     <div class="labeled-text__label-wrap">
                       <span class="labeled-text__label">Keybase</span>
