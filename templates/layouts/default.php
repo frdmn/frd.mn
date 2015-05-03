@@ -61,7 +61,7 @@
               <i class="icon icon--penrose"></i>
             </div>
             <div class="flag__body">
-              <span class="logo__title">FRD.MN</span><?php echo (isset($alias) ? '<span class="logo__slash">/</span><span class="logo__dir">'.$alias.'</span>' : ''); ?>
+              <span class="logo__title">FRD.MN</span><?php echo (!isset($alias) || isset($error) ? '' : '<span class="logo__slash">/</span><span class="logo__dir">'.$alias.'</span>'); ?>
             </div>
           </a>
         </div><!--
@@ -71,8 +71,7 @@
       </div>
     </div>
   </header>
-
-
+  
       <?=$this->section('content')?>
 
       <footer class="site-footer">

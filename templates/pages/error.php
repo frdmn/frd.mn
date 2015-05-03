@@ -1,4 +1,4 @@
-<?php $this->layout('layouts/default', compact('data', 'alias')) ?>
+<?php $this->layout('layouts/default', compact('data', 'alias', 'error')) ?>
 <div class="constrain constrain--max">
   <div class="sheet">
     <div class="headline-wrap">
