@@ -1,0 +1,26 @@
+@keyframes linkClick {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.logo {
+  @include media(max-width $breakTablet) {
+    width: 200px !important;
+    margin: 0 auto;
+  }
+  &:focus,
+  &:active {
+    .icon {
+      animation-duration: .2s;
+      animation-name: linkClick;
+      animation-iteration-count: 1;
+    }
+  }
+}

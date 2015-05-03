@@ -16,6 +16,12 @@
         color: darken(darkblue, 10%);
         font-weight: bold;
       }
+      &:focus,
+      &:active {
+        animation-duration: .2s;
+        animation-name: linkClick;
+        animation-iteration-count: 1;
+      }
     }
   }
 }
