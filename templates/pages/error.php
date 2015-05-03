@@ -2,10 +2,11 @@
 <div class="constrain constrain--max">
   <div class="sheet">
     <div class="headline-wrap">
-      <h1 class="headline heading-3 headline--upper space--bottom-double space-desk-wide--bottom-triple headline--wavy">Error <?= $error['code'] ?></h1>
+      <h1 class="headline heading-1 headline--upper space--bottom-double space-desk-wide--bottom-triple headline--wavy">&nbsp;</h1>
     </div>
+    <div class="text--center">
+      <h1 class="headline heading-1 headline--upper space-lap--bottom-none">Error <?= $error['code'] ?></h1>
 
-    <div class="headline-wrap space--top-double">
-      <h1 class="headline heading-3 headline--upper headline--wavy space-lap--bottom-none"><?= $error['message'] ?></h1>
-      <p>Go <a href="/">back</a> and try again.</p>
+      <h1 class="headline heading-2 headline--upper space-lap--bottom-none"><?= $error['message'] ?></h1>
+      <p class="typewriter">Return to <a href="/">front page back.</a></p>
     </div>
