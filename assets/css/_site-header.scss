@@ -1,7 +1,9 @@
 .site-header {
   background: #64615D;
   padding: $baseUnit/1.5 0;
-  @include font-size(18px, false);
+  @include media($breakLaptop) {
+    @include font-size(18px, false);
+  }
   line-height: 2;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;

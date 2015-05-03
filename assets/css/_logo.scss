@@ -12,7 +12,7 @@
 
 .logo {
   @include media(max-width $breakTablet) {
-    width: 200px !important;
+    //width: 200px !important;
     margin: 0 auto;
   }
   &:focus,

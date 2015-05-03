@@ -55,7 +55,7 @@
   <header class="site-header space--bottom-double space-lap--bottom-triple">
     <div class="constrain constrain--max">
       <div class="grid">
-        <div class="grid__item width-tab--1of2 text--center text-tab--left">
+        <div class="grid__item width-tab--3of4 text--center text-tab--left">
           <a class="flag logo" href="/">
             <div class="flag__image">
               <i class="icon icon--penrose"></i>
@@ -65,13 +65,13 @@
             </div>
           </a>
         </div><!--
-     --><div class="grid__item width-tab--1of2 text--center text-tab--right">
+     --><div class="grid__item width--0 width-tab--1of4 text--center text-tab--right">
           <a href="mailto:j@frd.mn">Contact</a>
         </div>
       </div>
     </div>
   </header>
-  
+
       <?=$this->section('content')?>
 
       <footer class="site-footer">
