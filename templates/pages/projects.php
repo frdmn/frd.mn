@@ -45,9 +45,12 @@
           </div>
         </div>
       </div>
-      <div class="constrain constrain--max text--center">
-        <img class="project-image" src="assets/images/project/<?= $alias; ?>.png" alt="Project: <?= $data['projects'][$alias]['name']; ?>" />
-      </div>
+      <?php if (file_exists($data['meta']['dir'].'/assets/images/project/'.$alias.'.png')): ?>
+        <div class="constrain constrain--max text--center">
+          <img class="project-image" src="assets/images/project/<?= $alias; ?>.png" alt="Project: <?= $data['projects'][$alias]['name']; ?>" />
+        </div>
+      <?php endif; ?>
+
       <div class="constrain constrain--max">
         <div class="sheet">
           <div class="headline-wrap">

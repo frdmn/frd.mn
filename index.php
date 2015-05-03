@@ -45,6 +45,9 @@
     $data['projects'] = $info_json['projects'];
     $data['github'] = $github_json['projects'];
 
+    // Add meta
+    $data['meta']['dir'] = __DIR__;
+
     // Return data
     return $data;
   }

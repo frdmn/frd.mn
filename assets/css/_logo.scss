@@ -17,6 +17,7 @@
   }
   &:focus,
   &:active {
+    outline: none;
     .icon {
       animation-duration: .2s;
       animation-name: linkClick;

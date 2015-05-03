@@ -36,6 +36,24 @@
     ]
   },
   "projects": {
+    "tar-multibackup": {
+      "owner": "frdmn",
+      "name": "tar-multibackup",
+      "alias": "tar-multibackup",
+      "category": "Script",
+      "date": "2015-03-09",
+      "description": "Bash script to backup and cycle tar archives",
+      "github": "https://github.com/frdmn/tar-multibackup",
+      "additional": {
+        "information": "Bash script to backup multiple folders and to clean up old backups based on a retention time. Some of the features: configurable post/pre-commands, tar excludes as well as retention.",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "/usr/bin/tar"
+          }
+        ]
+      }
+    },
     "alfred-dongers": {
       "owner": "frdmn",
       "name": "alfred-dongers",
@@ -59,7 +77,7 @@
       "owner": "frdmn",
       "name": "Pushbullet OS X Services",
       "alias": "pushbullet-osx-services",
-      "category": "scripts",
+      "category": "Script",
       "date": "2014-10-18",
       "description": "A Mac OS X services to push stuff to Pushbullet",
       "github": "https://github.com/frdmn/pushbullet-osx-services",
@@ -82,7 +100,7 @@
       "owner": "frdmn",
       "name": "uping",
       "alias": "uping",
-      "category": "scripts",
+      "category": "Script",
       "date": "2014-09-22",
       "description": "Get notified as soon as a host is responding to ping.",
       "github": "https://github.com/frdmn/uping",
@@ -176,7 +194,7 @@
       "owner": "frdmn",
       "name": "dotfiles",
       "alias": "dotfiles",
-      "category": "scripts",
+      "category": "Script",
       "date": "2014-08-11",
       "description": "Simple bork-based dotfile setup for both OS X and Linux systems.",
       "github": "https://github.com/frdmn/dotfiles",
@@ -286,12 +304,13 @@
       "owner": "frdmn",
       "name": "CommuniGate scripts",
       "alias": "CommuniGate-scripts",
-      "category": "scripts",
+      "category": "Script",
       "date": "2014-03-05",
       "description": "Perl scripts for the CommuniGate Pro mail server system",
       "github": "https://github.com/frdmn/CommuniGate-scripts",
       "additional": {
         "license": "MIT",
+        "information": "Two little Perl scripts for CommuniGate Pro:\n\n__listAndVerifyPasswords:__  \nThis script lists all accounts and their specific (plaintext if possible) passwords.\n\n__bulkUpdatePasswords__:  \nThis script is useful in case you updated CommuniGate's default password encryption method. It'll update every single e-mail account without changing the current password. This way you can bulk update ALL exisiting mail accounts.",
         "dependencies": [
           {
             "name": "CommuniGate Pro",
@@ -336,7 +355,7 @@
       "owner": "frdmn",
       "name": "ssltools",
       "alias": "ssltools",
-      "category": "scripts",
+      "category": "Script",
       "date": "2013-09-17",
       "description": "Bash scripts to analyze, troubleshoot and inspect SSL certificates",
       "github": "https://github.com/frdmn/ssltools",
@@ -355,12 +374,12 @@
       "owner": "frdmn",
       "name": "GiraHelper",
       "alias": "GiraHelper",
-      "category": "scripts",
+      "category": "Script",
       "date": "2013-05-08",
       "description": "Bash script to control the lights in my office",
       "github": "https://github.com/frdmn/GiraHelper",
       "additional": {
-        "information": "Dead simple Bash script to talk to a Gira home server.",
+        "information": "Dead simple Bash script to talk to a Gira home server and toggle power outlets (office lights in my case). that speaks TCP (or actually HTTP). It knows TCP (actually HTTP) very well.",
         "license": "MIT",
         "dependencies": [
           {
