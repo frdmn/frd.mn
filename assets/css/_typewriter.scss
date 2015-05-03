@@ -14,7 +14,7 @@
       text-decoration: underline;
       &:hover {
         color: darken(darkblue, 10%);
-        background: rgba(yellow, .1);
+        font-weight: bold;
       }
     }
   }
@@ -43,6 +43,3 @@ ul.typewriter,
   top: -2px;
   display: inline-block;
 }
-
-
-
