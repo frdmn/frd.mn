@@ -31,6 +31,24 @@
     }
   },
   "projects": {
+    "package-snippets": {
+      "owner": "frdmn",
+      "name": "package-snippets",
+      "alias": "package-snippets",
+      "category": "Sublime Text 3",
+      "date": "2015-04-20",
+      "description": "Sublime Text 3 text snippets to quickly create Markdown files",
+      "github": "https://github.com/frdmn/package-snippets",
+      "additional": {
+        "information": "Sublime Text 3 text snippets to quickly create git/GitHub related Markdown files like README or license ones.",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "Sublime Text 3"
+          }
+        ]
+      }
+    },
     "tar-multibackup": {
       "owner": "frdmn",
       "name": "tar-multibackup",
