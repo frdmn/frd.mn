@@ -44,7 +44,7 @@
   }
 
   // Encode as JSON and print
-  $json = json_encode($json_prepare);
+  $json = json_encode($json_prepare, JSON_PRETTY_PRINT);
   echo $json;
 
   // Dump if /?dump is set
