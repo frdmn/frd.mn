@@ -49,6 +49,33 @@
         ]
       }
     },
+    "google-speedtest-chart": {
+      "owner": "frdmn",
+      "name": "google-speedtest-chart",
+      "alias": "google-speedtest-chart",
+      "category": "Web, scripts",
+      "date": "2015-03-07",
+      "description": "Python script to create a beautiful Google Chart out of your speedtest results",
+      "github": "https://github.com/frdmn/google-speedtest-chart",
+      "additional": {
+        "information": "Simple Python script to push speedtest results (using speedtest-cli) to a Google Docs spreadsheet. I use this to measure and track my upload and download bandwith.\n\n[Click here](https://docs.google.com/spreadsheets/d/1QvV6POBVBXuq5iXSOLNd5bwgd5To8FMuvsrSfvY7Nuk/pubchart?oid=1973311741&format=interactive) for an interactive demo (actually productive) version of the chart.",
+        "license": "WTFPL",
+        "dependencies": [
+          {
+            "name": "Google Docs",
+            "link": "https://docs.google.com"
+          }
+        ],
+        "libraries": [
+          {
+            "name": "speedtest-cli"
+          },
+          {
+            "name": "gdata"
+          }
+        ]
+      }
+    },
     "docker-hastebin": {
       "owner": "frdmn",
       "name": "docker-hastebin",
