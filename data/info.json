@@ -49,6 +49,24 @@
         ]
       }
     },
+    "docker-hastebin": {
+      "owner": "frdmn",
+      "name": "docker-hastebin",
+      "alias": "docker-hastebin",
+      "category": "Docker",
+      "date": "2015-03-03",
+      "description": "Dockerized version of hastebin",
+      "github": "https://github.com/frdmn/docker-hastebin",
+      "additional": {
+        "information": "Dockerized version of @seejohnrun' haste-server pastebin clone written in NodeJS.",
+        "license": "WTFPL",
+        "dependencies": [
+          {
+            "name": "Docker"
+          }
+        ]
+      }
+    },
     "alfred-dongers": {
       "owner": "frdmn",
       "name": "alfred-dongers",
