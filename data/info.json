@@ -376,6 +376,30 @@
         "license": "MIT"
       }
     },
+    "AndTekAgent": {
+      "owner": "frdmn",
+      "name": "AndTekAgent",
+      "alias": "AndTekAgent",
+      "category": "Objective-C",
+      "date": "2014-07-18",
+      "description": "OS X application to quickly login and logout in a AndTek callcenter",
+      "github": "https://github.com/frdmn/AndTekAgent",
+      "additional": {
+        "information": "Simple Objective-C menubar application to control your agent status in a AndTek callcenter. Also features a sreensaver hook as well as a login and logout hook, so you don't have to bother to sign out manually. AndTekAgent will automatically set your status (via AndTek HTTP API).",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "Cisco telephone system"
+          },
+          {
+            "name": "AndTek call center"
+          },
+          {
+            "name": "OS X"
+          }
+        ]
+      }
+    },
     "CommuniGate-scripts": {
       "owner": "frdmn",
       "name": "CommuniGate scripts",
