@@ -49,6 +49,24 @@
         ]
       }
     },
+    "docker-ghost": {
+      "owner": "frdmn",
+      "name": "docker-ghost",
+      "alias": "docker-ghost",
+      "category": "Docker",
+      "date": "2015-03-23",
+      "description": "Makefile to automate Docker image creation \/ instance restarts",
+      "github": "https://github.com/frdmn/docker-ghost",
+      "additional": {
+        "information": "Makefile for easy and comfortable Ghost Docker image creation and instance restarts.",
+        "license": "WTFPL",
+        "dependencies": [
+          {
+            "name": "Docker"
+          }
+        ]
+      }
+    },
     "tar-multibackup": {
       "owner": "frdmn",
       "name": "tar-multibackup",
