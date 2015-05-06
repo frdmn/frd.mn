@@ -1,8 +1,23 @@
 <?php $this->layout('layouts/default', compact('data', 'alias')) ?>
+
+<?php
+  $headingClass = 'heading-1';
+
+  // if name contains a word with more than 11 characters
+  if (max(array_map('strlen', explode(' ', str_replace('-', ' ', $data['projects'][$alias]['name'])))) >= 11) {
+    $headingClass = 'heading-2 space--top';
+  }
+
+  // if name itself has more than 24 characters
+  if (strlen($data['projects'][$alias]['name']) >= 24) {
+    $headingClass = 'heading-2 space--top';
+  }
+?>
+
       <div class="constrain constrain--max constrain--hero space--bottom">
         <div class="grid">
           <div class="grid__item width-lap--2of3 width-desk--1of2">
-            <h1 class="heading-1 headline headline--upper space--bottom-quarter">
+            <h1 class="<?= $headingClass ?> headline headline--upper space--bottom-quarter">
               <?= $data['projects'][$alias]['name']; ?>
             </h1>
             <div class="constrain constrain--small constrain--text">
