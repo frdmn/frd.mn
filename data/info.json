@@ -28,14 +28,45 @@
         "title": "blog.frd.mn",
         "link": "http://blog.frd.mn"
       }
-    },
-    "github-organizations": [
-      "BanManagement",
-      "gta5-map",
-      "yeahwhat-mc"
-    ]
+    }
   },
   "projects": {
+    "package-snippets": {
+      "owner": "frdmn",
+      "name": "package-snippets",
+      "alias": "package-snippets",
+      "category": "Sublime Text 3",
+      "date": "2015-04-20",
+      "description": "Sublime Text 3 text snippets to quickly create Markdown files",
+      "github": "https://github.com/frdmn/package-snippets",
+      "additional": {
+        "information": "Sublime Text 3 text snippets to quickly create git/GitHub related Markdown files like README or license ones.",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "Sublime Text 3"
+          }
+        ]
+      }
+    },
+    "docker-ghost": {
+      "owner": "frdmn",
+      "name": "docker-ghost",
+      "alias": "docker-ghost",
+      "category": "Docker",
+      "date": "2015-03-23",
+      "description": "Makefile to automate Docker image creation \/ instance restarts",
+      "github": "https://github.com/frdmn/docker-ghost",
+      "additional": {
+        "information": "Makefile for easy and comfortable Ghost Docker image creation and instance restarts.",
+        "license": "WTFPL",
+        "dependencies": [
+          {
+            "name": "Docker"
+          }
+        ]
+      }
+    },
     "tar-multibackup": {
       "owner": "frdmn",
       "name": "tar-multibackup",
@@ -50,6 +81,51 @@
         "dependencies": [
           {
             "name": "/usr/bin/tar"
+          }
+        ]
+      }
+    },
+    "google-speedtest-chart": {
+      "owner": "frdmn",
+      "name": "google-speedtest-chart",
+      "alias": "google-speedtest-chart",
+      "category": "Web, scripts",
+      "date": "2015-03-07",
+      "description": "Python script to create a beautiful Google Chart out of your speedtest results",
+      "github": "https://github.com/frdmn/google-speedtest-chart",
+      "additional": {
+        "information": "Simple Python script to push speedtest results (using speedtest-cli) to a Google Docs spreadsheet. I use this to measure and track my upload and download bandwith.\n\n[Click here](https://docs.google.com/spreadsheets/d/1QvV6POBVBXuq5iXSOLNd5bwgd5To8FMuvsrSfvY7Nuk/pubchart?oid=1973311741&format=interactive) for an interactive demo (actually productive) version of the chart.",
+        "license": "WTFPL",
+        "dependencies": [
+          {
+            "name": "Google Docs",
+            "link": "https://docs.google.com"
+          }
+        ],
+        "libraries": [
+          {
+            "name": "speedtest-cli"
+          },
+          {
+            "name": "gdata"
+          }
+        ]
+      }
+    },
+    "docker-hastebin": {
+      "owner": "frdmn",
+      "name": "docker-hastebin",
+      "alias": "docker-hastebin",
+      "category": "Docker",
+      "date": "2015-03-03",
+      "description": "Dockerized version of hastebin",
+      "github": "https://github.com/frdmn/docker-hastebin",
+      "additional": {
+        "information": "Dockerized version of @seejohnrun' haste-server pastebin clone written in NodeJS.",
+        "license": "WTFPL",
+        "dependencies": [
+          {
+            "name": "Docker"
           }
         ]
       }
@@ -298,6 +374,30 @@
           }
         ],
         "license": "MIT"
+      }
+    },
+    "AndTekAgent": {
+      "owner": "frdmn",
+      "name": "AndTekAgent",
+      "alias": "AndTekAgent",
+      "category": "Objective-C",
+      "date": "2014-07-18",
+      "description": "OS X application to quickly login and logout in a AndTek callcenter",
+      "github": "https://github.com/frdmn/AndTekAgent",
+      "additional": {
+        "information": "Simple Objective-C menubar application to control your agent status in a AndTek callcenter. Also features a sreensaver hook as well as a login and logout hook, so you don't have to bother to sign out manually. AndTekAgent will automatically set your status (via AndTek HTTP API).",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "Cisco telephone system"
+          },
+          {
+            "name": "AndTek call center"
+          },
+          {
+            "name": "OS X"
+          }
+        ]
       }
     },
     "CommuniGate-scripts": {

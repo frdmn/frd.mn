@@ -17,45 +17,34 @@
   // Load portfolio data
   $info_json = json_decode(file_get_contents("data/info.json"), true);
 
-  // Store GitHub username and organizations to work with
-  $githubUsernames = array_merge(array($info_json['information']['about']['username']), $info_json['information']['github-organizations']);
-
   // Initiate API client
   $client = new \Github\Client();
 
   // Authenticate using API token in .env
   $client->authenticate(getenv('GITHUB_API_TOKEN'), null, Github\Client::AUTH_HTTP_TOKEN);
 
-  // Fetch all repositories
-  $paginator  = new Github\ResultPager($client);
+  foreach ($info_json['projects'] as $name => $project) {
+    $repository = $client->api('repo')->show($project['owner'], $project['alias']);
 
-  foreach ($githubUsernames as $githubUsername) {
-    // Fetch all repositories of $githubUsername
-    $repositories = $paginator->fetchAll($client->api('user'), 'repositories', array($githubUsername));
+    $json_prepare['projects'][$project['owner'].'/'.$project['alias']]['name'] = $repository['name'];
+    $json_prepare['projects'][$project['owner'].'/'.$project['alias']]['description'] = $repository['description'];
+    $json_prepare['projects'][$project['owner'].'/'.$project['alias']]['github'] = $repository['full_name'];
+    $json_prepare['projects'][$project['owner'].'/'.$project['alias']]['stars'] = $repository['stargazers_count'];
+    $json_prepare['projects'][$project['owner'].'/'.$project['alias']]['watcher'] = $repository['watchers_count'];
+    $json_prepare['projects'][$project['owner'].'/'.$project['alias']]['forks'] = $repository['forks'];
+    $json_prepare['projects'][$project['owner'].'/'.$project['alias']]['language'] = $repository['language'];
+    $json_prepare['projects'][$project['owner'].'/'.$project['alias']]['created'] = $repository['created_at'];
+    $json_prepare['projects'][$project['owner'].'/'.$project['alias']]['updated'] = $repository['updated_at'];
 
-    // Loop through repos
-    foreach ($repositories as $repository) {
-      // Store informations in temporary object
-      $json_prepare['projects'][$githubUsername.'/'.$repository['name']]['name'] = $repository['name'];
-      $json_prepare['projects'][$githubUsername.'/'.$repository['name']]['description'] = $repository['description'];
-      $json_prepare['projects'][$githubUsername.'/'.$repository['name']]['github'] = $repository['full_name'];
-      $json_prepare['projects'][$githubUsername.'/'.$repository['name']]['stars'] = $repository['stargazers_count'];
-      $json_prepare['projects'][$githubUsername.'/'.$repository['name']]['watcher'] = $repository['watchers_count'];
-      $json_prepare['projects'][$githubUsername.'/'.$repository['name']]['forks'] = $repository['forks'];
-      $json_prepare['projects'][$githubUsername.'/'.$repository['name']]['language'] = $repository['language'];
-      $json_prepare['projects'][$githubUsername.'/'.$repository['name']]['created'] = $repository['created_at'];
-      $json_prepare['projects'][$githubUsername.'/'.$repository['name']]['updated'] = $repository['updated_at'];
-
-      // Languages
-      $languages = $client->api('repo')->languages($githubUsername, $repository['name']);
-      foreach ($languages as $language => $size) {
-        $json_prepare['projects'][$githubUsername.'/'.$repository['name']]['languages'][$language] = percent($size, array_sum($languages));
-      }
+    // Languages
+    $languages = $client->api('repo')->languages($project['owner'], $project['alias']);
+    foreach ($languages as $language => $size) {
+      $json_prepare['projects'][$project['owner'].'/'.$project['alias']]['languages'][$language] = percent($size, array_sum($languages));
     }
   }
 
   // Encode as JSON and print
-  $json = json_encode($json_prepare);
+  $json = json_encode($json_prepare, JSON_PRETTY_PRINT);
   echo $json;
 
   // Dump if /?dump is set
