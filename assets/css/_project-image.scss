@@ -1,6 +1,9 @@
 .project-image {
   position: relative;
   z-index: -1;
+}
+
+.project-image--pullup {
   margin-bottom: -200px;
   @include media($breakTablet) {
     margin-bottom: -250px;
