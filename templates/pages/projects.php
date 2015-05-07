@@ -62,7 +62,11 @@
       </div>
       <?php if (file_exists($data['meta']['dir'].'/assets/images/project/'.$alias.'.png')): ?>
         <div class="constrain constrain--max text--center">
-          <img class="project-image <?= ((substr( $alias, 0, 6 ) !== "alfred") ? 'project-image--pullup' : '');?> " src="assets/images/project/<?= $alias; ?>.png" alt="Project: <?= $data['projects'][$alias]['name']; ?>" />
+          <?php
+          $img = getimagesize($data['meta']['dir'].'/assets/images/project/'.$alias.'.png');
+          ?>
+
+          <img class="project-image <?= ((substr( $alias, 0, 6 ) !== "alfred") ? 'project-image--pullup' : '');?> " src="assets/images/project/<?= $alias; ?>.png" alt="Project: <?= $data['projects'][$alias]['name']; ?>" width="<?= $img[0]/2 ?>" height="<?= $img[1]/2 ?>"/>
         </div>
       <?php endif; ?>
 
