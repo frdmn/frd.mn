@@ -1,12 +1,27 @@
 /**
  * Modal
  *
+ * Modal class takes an object containing the opening element,
+ * modal content and template, joins modal content and template
+ * and appends them to body by clicking the opening element.
+ *
  * @param {object} object
  *
  * object.modal    class or HTMLCollection,
  * object.content  string
  * object.template string with {{content}} placeholder
  * object.callback function (optional)
+ *
+ * Example usage:
+
+var o = {};
+o.modal = '.open-legal';
+o.content = document.getElementById('legal-content').innerHTML;
+o.template = '<div class="modal modal--centered">{{content}}</div>';
+
+var legalModal = new Modal(o);
+
+ *
  */
 
 var Modal = function(object) {
@@ -34,21 +49,21 @@ var Modal = function(object) {
 /**
  * Modal.open
  *
+ * Joins modal content and template and appends it to body.
+ * Sets body overflow to hidden to prevent double scrollbars.
+ *
  * @param  {object} modal
  */
 Modal.prototype.open = function(modal) {
-  // Create modal wrapper
+
   var wrapper = document.createElement('div');
   wrapper.id = 'modal-wrapper';
   wrapper.className = 'modal-wrapper';
 
-  // Create modal
   wrapper.innerHTML = modal.template.replace('{{content}}', modal.content);
 
-  // Append modal to body
   document.body.appendChild(wrapper);
 
-  // Set body overflow to hidden, to prevent double scrollbars
   document.body.style.overflow = 'hidden';
 
   // Add active class to modal wrapper.
@@ -57,27 +72,27 @@ Modal.prototype.open = function(modal) {
     wrapper.className += ' modal-wrapper--active';
   },10);
 
-  // Click handler to close modal
+  // Click handler to close modal and prevent clicks
+  // inside the modal from closing it
   click(wrapper, function() {
     modal.close(modal);
   });
 
-  // Prevent clicks inside the modal from closing it
   click(wrapper.firstChild, function(e) {
     e.stopPropagation();
   });
 
-  // Optional callback function
   if (modal.callback)
     modal.callback();
 };
 
 /**
  * Modal.close
+ *
+ * Removes active class from modal wrapper and
+ * overflow:hidden from body to reanable scrolling
  */
 Modal.prototype.close = function() {
-  // Remove active class from modal wrapper and remove
-  // overflow:hidden from body to reanable scrolling
   var wrapper = document.getElementById('modal-wrapper');
   wrapper.className = wrapper.className.replace(' modal-wrapper--active', '');
   setTimeout(function() {
