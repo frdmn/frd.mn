@@ -36,3 +36,9 @@
 .flag__body {
   //width: 100%;
 }
+
+.flag--spaced {
+  .flag__image {
+    padding-right: $baseUnit*1.5;
+  }
+}
