@@ -5,11 +5,11 @@
 }
 
 .project-image--pullup {
-  margin-bottom: -200px;
-  @include media($breakTablet) {
-    margin-bottom: -250px;
-  }
-  @include media($breakLaptop) {
-    margin-bottom: -350px;
-  }
+  margin-bottom: -15%;
+/*   @include media($breakTablet) {
+  margin-bottom: -250px;
+}
+@include media($breakLaptop) {
+  margin-bottom: -350px;
+} */
 }
