@@ -37,8 +37,24 @@
   //width: 100%;
 }
 
+.flag--responsive {
+  @include media(max-width $breakTablet) {
+    &,
+    .flag__image,
+    .flag__body {
+      display: block;
+      text-align: center;
+    }
+    .flag__image > img {
+      display: inline-block;
+    }
+  }
+}
+
 .flag--spaced {
-  .flag__image {
-    padding-right: $baseUnit*1.5;
+  @include media($breakTablet) {
+    .flag__image {
+      padding-right: $baseUnit*1.5;
+    }
   }
 }
