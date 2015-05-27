@@ -98,7 +98,7 @@ Ppgyg2/gU4xp3dshaf3sKGg8jeg=
 
 
       <div class="headline-wrap">
-        <h1 class="headline heading-3 headline--upper headline--wavy space-lap--bottom-none">Projects</h1>
+        <h1 class="headline heading-3 headline--upper headline--wavy space--bottom-double">Projects</h1>
       </div>
 
       <div class="project-table">
