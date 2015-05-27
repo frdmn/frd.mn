@@ -37,7 +37,7 @@ ul.typewriter,
   li:before {
     position: absolute;
     left: -$baseUnit;
-    content: '—';
+    content: '\2014';
     margin-right: $baseUnit/2;
   }
 }
