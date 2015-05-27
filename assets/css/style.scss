@@ -16,6 +16,7 @@
 
 $navObject: true;
 $gridObject: true;
+$buttonObject: true;
 $constrainObject: true;
 
 /* fonts & font sizes */
@@ -75,6 +76,7 @@ $constrainMax:     1300px;
 @import 'constrain';
 @import 'nav';
 @import 'icon';
+@import 'button';
 
 @import 'site-header';
 @import 'logo';

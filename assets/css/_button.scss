@@ -1,0 +1,17 @@
+.button {
+  @include font-size(18px, false);
+  transition: .3s;
+  background: rgba($colorLink, .3);
+}
+
+.button--fade-left {
+  background: linear-gradient(to left, rgba($colorLink, .3), rgba($colorLink, 0));
+}
+
+.button--fade-right {
+  background: linear-gradient(to right, rgba($colorLink, .3), rgba($colorLink, 0));
+}
+
+.button--upper {
+  text-transform: uppercase;
+}
