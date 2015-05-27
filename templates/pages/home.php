@@ -1,17 +1,35 @@
 <?php $this->layout('layouts/default', compact('data', 'alias')) ?>
-  <div class="constrain constrain--large space--bottom-double space-desk-wide--bottom-triple">
-    <div class="flag flag--spaced flag--responsive">
-      <div class="flag__image">
-        <img class="rounded-image" src="assets/images/jonas.jpg" alt="Jonas Friedmann" />
-      </div>
-      <div class="flag__body">
-        <div class="fading-seperator">
-          <h1 class="headline heading-2 space--bottom-half"><?= $data['info']['about']['name']; ?></h1>
-        </div>
-        <p class="text--hero space--bottom-none">
-          <?= $data['info']['about']['bio']; ?> <span class="emoji">😫</span>
-        </p>
-      </div>
+  <div class="constrain constrain--medium space--bottom-double space-desk-wide--bottom-triple text--center">
+    <img class="rounded-image space--bottom-double" src="assets/images/jonas.jpg" alt="Jonas Friedmann" />
+
+    <div class="fading-seperator fading-seperator--center">
+      <h1 class="headline headline--upper heading-2 space--bottom"><?= $data['info']['about']['name']; ?></h1>
+    </div>
+    <p class="text--hero space--bottom-none space--top">
+      <?= $data['info']['about']['bio']; ?> <span class="emoji">😫</span>
+    </p>
+    <div class="space--bottom-none space--top">
+      <nav>
+        <ul class="nav nav--spaced">
+          <li>
+            <a class="button button-- button--pill button--fade-left" href="<?= $data['info']['contact']['blog']['link']; ?>">
+              <?= $data['info']['contact']['blog']['title']; ?>
+            </a>
+          </li>
+          <li>
+            <a class="button button-- button--pill" href="<?= $data['info']['contact']['twitter']['link']; ?>">
+              <?= $data['info']['contact']['twitter']['title']; ?>
+            </a>
+          </li>
+          <li>
+            <a class="button button-- button--pill button--fade-right" href="<?= $data['info']['contact']['mail']['link']; ?>">
+              <?= $data['info']['contact']['mail']['title']; ?>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
     </div>
   </div>
   <div class="constrain constrain--max">
