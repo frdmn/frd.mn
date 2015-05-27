@@ -61,7 +61,7 @@
         </div>
       </div>
       <?php if (file_exists($data['meta']['dir'].'/assets/images/project/'.$alias.'.png')): ?>
-        <div class="constrain constrain--max text--center">
+        <div class="constrain constrain--max constrain--project-image text--center">
           <?php
           $img = getimagesize($data['meta']['dir'].'/assets/images/project/'.$alias.'.png');
           ?>
@@ -70,7 +70,7 @@
         </div>
       <?php endif; ?>
 
-      <div class="constrain constrain--max">
+      <div class="constrain constrain--max constrain--sheet">
         <div class="sheet">
           <div class="headline-wrap">
             <h1 class="headline heading-3 headline--upper space--bottom-double space-desk-wide--bottom-triple headline--wavy">Project Description</h1>

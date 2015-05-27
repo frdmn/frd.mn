@@ -6,6 +6,8 @@
 }
 
 .constrain--hero {
+  position: relative;
+  z-index: $z-indexSheet - 1;
   padding: $baseUnit $baseUnit 0 ;
   @include media($breakLaptop) {
     padding: $baseUnit $baseUnit*2 0 ;
@@ -13,6 +15,16 @@
   @include media($breakDesktopWide) {
     padding: $baseUnit $baseUnit*6 $baseUnit*2;
   }
+}
+
+.constrain--project-image {
+  position: relative;
+  z-index: $z-indexSheet - 1;
+}
+
+.constrain--sheet {
+  position: relative;
+  z-index: $z-indexSheet;
 }
 
 .constrain--text {
