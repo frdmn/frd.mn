@@ -24,6 +24,13 @@
   }
 }
 
+@include media(max-width $breakDesktop) {
+  .project-table__category {
+    display: none;
+  }
+}
+
+
 @include media(max-width $breakLaptop) {
   .project-table {
     border-top: 2px solid $colorBorderDark;
@@ -51,47 +58,15 @@
   .project-table__title,
   .project-table__category {
     position: relative;
-    margin-bottom: $baseUnit;
     border-bottom: none !important;
-    &:before {
-      display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 2px;
-      content: '';
-      bottom: 0;
-      margin-bottom: -2px;
-      background: $colorBorderLight;
-    }
-    &:after {
-      display: block;
-      position: absolute;
-      font-family: $fontPrimary;
-      bottom: -$baseUnit/2;
-      background: $colorSheetBackgroundBase;
-      padding-right: $baseUnit/4;
-      @include font-size(14px);
-    }
   }
 
   .project-table__date {
     display: none;
-    &:after {
-      content: 'Date';
-    }
-  }
-
-  .project-table__title {
-    &:after {
-      content: 'Title';
-    }
   }
 
   .project-table__category {
     display: none;
-    &:after {
-      content: 'Category';
-    }
   }
+
 }
