@@ -11,6 +11,15 @@
     margin-bottom: -$baseUnit/4;
     background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,.1) 10px, rgba(0,0,0,0) 100%);
   }
+
+  &--center {
+    overflow: hidden;
+    margin-bottom: 0;
+    &:after {
+      margin-bottom: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,.1) 50%, rgba(0,0,0,0) 100%);
+    }
+  }
 }
 
 .fading-box {
