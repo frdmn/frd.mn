@@ -2,6 +2,7 @@ $breakModal: $breakLaptop min-height 600px;
 
 .modal-wrapper {
   position: fixed;
+  z-index: $z-indexModal;
   top: 0;
   left: 0;
   right: 0;
