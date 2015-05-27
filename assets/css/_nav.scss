@@ -14,3 +14,9 @@
     }
   }
 }
+
+.nav--spaced {
+  > li {
+    margin: 0 $baseUnit/2;
+  }
+}
