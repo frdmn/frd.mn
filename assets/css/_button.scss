@@ -6,10 +6,16 @@
 
 .button--fade-left {
   background: linear-gradient(to left, rgba($colorLink, .3), rgba($colorLink, 0));
+  @include media(max-width $breakLaptop) {
+    background: rgba($colorLink, .3);
+  }
 }
 
 .button--fade-right {
   background: linear-gradient(to right, rgba($colorLink, .3), rgba($colorLink, 0));
+  @include media(max-width $breakLaptop) {
+    background: rgba($colorLink, .3);
+  }
 }
 
 .button--upper {

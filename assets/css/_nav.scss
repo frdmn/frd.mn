@@ -19,4 +19,10 @@
   > li {
     margin: 0 $baseUnit/2;
   }
+  @include media(max-width $breakLaptop) {
+    > li {
+      display: block;
+      margin-bottom: $baseUnit/2;
+    }
+  }
 }
