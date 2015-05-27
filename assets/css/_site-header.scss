@@ -1,5 +1,5 @@
 .site-header {
-  background: #64615D;
+  background: $colorSiteHeader;
   padding: $baseUnit/1.5 0;
   @include media($breakLaptop) {
     @include font-size(18px, false);
