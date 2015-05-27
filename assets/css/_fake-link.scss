@@ -1,0 +1,10 @@
+.fake-link {
+  color: lighten($colorLink, 20%);
+  transition: .3s;
+  &:hover {
+    color: $colorLink;
+  }
+  &--block {
+    display: block;
+  }
+}

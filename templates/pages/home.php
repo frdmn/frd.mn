@@ -25,7 +25,7 @@
             <a class="tooltip button button-- button--pill button--fade-right" href="<?= $data['info']['contact']['mail']['link']; ?>">
               <?= $data['info']['contact']['mail']['title']; ?>
               <span class="tooltip__content">
-                <span class="fake-link open-gpg">Fancy&nbsp;some&nbsp;privacy?</span>
+                <span class="fake-link fake-link--block open-gpg">Fancy&nbsp;some&nbsp;privacy?</span>
               </span>
             </a>
           </li>
