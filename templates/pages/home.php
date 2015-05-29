@@ -1,5 +1,5 @@
 <?php $this->layout('layouts/default', compact('data', 'alias')) ?>
-  <div class="constrain constrain--medium space--bottom-double space-desk-wide--bottom-triple text--center">
+  <div class="constrain constrain--medium constrain--hero-frontpage text--center">
     <img class="rounded-image space--bottom-double" src="assets/images/jonas.jpg" alt="Jonas Friedmann" />
 
     <div class="fading-seperator fading-seperator--center">
@@ -93,7 +93,7 @@ Ppgyg2/gU4xp3dshaf3sKGg8jeg=
 
     </div>
   </div>
-  <div class="constrain constrain--max">
+  <div class="constrain constrain--max constrain--sheet">
     <div class="sheet">
 
 

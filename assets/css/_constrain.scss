@@ -10,16 +10,34 @@
   z-index: $z-indexSheet - 1;
   padding: $baseUnit $baseUnit 0 ;
   @include media($breakLaptop) {
-    padding: $baseUnit $baseUnit*2 0 ;
+    padding: $baseUnit $baseUnit*2 $baseUnit ;
   }
   @include media($breakDesktopWide) {
     padding: $baseUnit $baseUnit*6 $baseUnit*2;
   }
 }
 
+.constrain--hero-frontpage {
+  position: relative;
+  z-index: $z-indexSheet - 1;
+  padding-bottom: $baseUnit;
+  @include media($breakLaptop) {
+    padding: $baseUnit*2 0 $baseUnit*2 ;
+  }
+  @include media($breakDesktopWide) {
+    padding: $baseUnit*1 0 $baseUnit*2;
+  }
+}
+
 .constrain--project-image {
   position: relative;
   z-index: $z-indexSheet - 1;
+  @include media($breakLaptop) {
+    margin-bottom: $baseUnit;
+  }
+  @include media($breakDesktopWide) {
+    margin-bottom: $baseUnit*2;
+  }
 }
 
 .constrain--sheet {
