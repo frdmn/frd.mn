@@ -66,7 +66,7 @@
           $img = getimagesize($data['meta']['dir'].'/assets/images/project/'.$alias.'.png');
           ?>
 
-          <img class="project-image <?= ((substr( $alias, 0, 6 ) !== "alfred") ? 'project-image--pullup' : '');?> <?= ($data['projects'][$alias]['screenshot-format']) ? $data['projects'][$alias]['screenshot-format'] : '' ?>" src="assets/images/project/<?= $alias; ?>.png" alt="Project: <?= $data['projects'][$alias]['name']; ?>" width="<?= $img[0]/2 ?>" height="<?= $img[1]/2 ?>"/>
+          <img class="project-image <?= ($data['projects'][$alias]['screenshot-format']) ? 'project-image--'.$data['projects'][$alias]['screenshot-format'] : '' ?>" src="assets/images/project/<?= $alias; ?>.png" alt="Project: <?= $data['projects'][$alias]['name']; ?>" width="<?= $img[0]/2 ?>" height="<?= $img[1]/2 ?>"/>
         </div>
       <?php endif; ?>
 
