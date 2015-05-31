@@ -52,7 +52,7 @@
   <script src="assets/js/modernizr.js"></script>
 </head>
 <body>
-  <header class="site-header space--bottom-double space-desk-wide--bottom-triple">
+  <header class="site-header space-lap--bottom space-desk-wide--bottom-triple">
     <div class="constrain constrain--max text--center text-tab--left">
       <div class="grid">
         <div class="grid__item<?= (isset($alias) ? ' width-tab--3of4' : '') ?> text--center text-tab--left">
