@@ -88,6 +88,34 @@
         ]
       }
     },
+    "dnsbl-webutils": {
+      "owner": "frdmn",
+      "name": "dnsbl-webutils",
+      "alias": "dnsbl-webutils",
+      "screenshot-format": "pullup",
+      "category": "Web, WIP",
+      "date": "2015-03-31",
+      "description": "Web and commandline based DNSBL utilities ",
+      "github": "https://github.com/frdmn/dnsbl-webutils",
+      "additional": {
+        "information": "Web based and self hosted DNSBL (or RBL) utilities:\n\n* **Check**: Web based real time check against quite a few (233 at this time) DNSBLs\n* **API**: In case you need a JSON response, use the API.\n\nThis can be used as free alternative to [MXtoolbox](http://mxtoolbox.com/blacklists.aspx)'s monitor.",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "Web server"
+          }
+        ],
+        "libraries": [
+          {
+            "name": "Composer"
+          },
+          {
+            "name": "Lumen framework",
+            "link": "http://lumen.laravel.com"
+          }
+        ]
+      }
+    },
     "docker-ghost": {
       "owner": "frdmn",
       "name": "docker-ghost",
