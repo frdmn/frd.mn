@@ -17,6 +17,10 @@
   // Load portfolio data
   $info_json = json_decode(file_get_contents("data/info.json"), true);
 
+  if (!getenv('GITHUB_API_TOKEN')) {
+    die('No "GITHUB_API_TOKEN" found in .env file!');
+  }
+
   // Initiate API client
   $client = new \Github\Client();
 
