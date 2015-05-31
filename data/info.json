@@ -31,6 +31,25 @@
     }
   },
   "projects": {
+    "docker-cloudbot": {
+      "owner": "frdmn",
+      "name": "docker-cloudbot",
+      "alias": "docker-cloudbot",
+      "screenshot-format": "pullup",
+      "category": "Docker",
+      "date": "2015-05-13",
+      "description": "Dockerized version of the Python based IRC bot",
+      "github": "https://github.com/frdmn/docker-cloudbot",
+      "additional": {
+        "information": "Makefile for easy and comfortable CloudBot Docker image creation and instance restarts.",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "Docker"
+          }
+        ]
+      }
+    },
     "package-snippets": {
       "owner": "frdmn",
       "name": "package-snippets",
