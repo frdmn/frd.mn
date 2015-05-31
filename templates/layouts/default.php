@@ -6,7 +6,7 @@
 
   <title><?= isset($alias) ? $alias.' &middot; ' : '' ?><?= $data['info']['about']['name']; ?> &middot; <?= $data['info']['about']['city']; ?></title>
 
-  <meta name="description" content="">
+  <meta name="description" content="<?= isset($alias) ? $data['projects'][$alias]['description'] : $data['info']['about']['bio']; ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="assets/css/style.css">
