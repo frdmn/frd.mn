@@ -5,12 +5,12 @@
 
   // if name contains a word with more than 11 characters
   if (max(array_map('strlen', explode(' ', str_replace('-', ' ', $data['projects'][$alias]['name'])))) >= 11) {
-    $headingClass = 'heading-2 space--top';
+    $headingClass = 'heading-2 space-lap--top';
   }
 
   // if name itself has more than 24 characters
   if (strlen($data['projects'][$alias]['name']) >= 24) {
-    $headingClass = 'heading-2 space--top';
+    $headingClass = 'heading-2 space-lap--top';
   }
 ?>
 
