@@ -24,6 +24,6 @@ h2,
 h3,
 .heading-3 {
   @include media(max-width $breakLaptop) {
-    @include font-size($headingSize6);
+    @include font-size($headingSize5);
   }
 }
