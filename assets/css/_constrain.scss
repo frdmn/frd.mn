@@ -21,8 +21,10 @@
   position: relative;
   z-index: $z-indexSheet - 1;
   padding: $baseUnit;
+  max-width: 380px;
   @include media($breakLaptop) {
-    padding: $baseUnit*2 0 $baseUnit*2 ;
+    padding: $baseUnit*2 0 $baseUnit*2;
+    max-width: 620px;
   }
   @include media($breakDesktopWide) {
     padding: $baseUnit*1 0 $baseUnit*2;
