@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title><?= $data['info']['about']['name']; ?> - <?= $data['info']['about']['username']; ?><?= (isset($alias)) ? '/'.$alias : '' ?></title>
+  <title><?= isset($alias) ? $alias.' &middot; ' : '' ?><?= $data['info']['about']['name']; ?> &middot; <?= $data['info']['about']['city']; ?></title>
 
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
