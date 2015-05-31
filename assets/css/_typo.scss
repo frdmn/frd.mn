@@ -8,6 +8,6 @@ h1,
 .heading-1 {
   @include font-size($headingSize1);
   @include media(max-width $breakLaptop) {
-    @include font-size($headingSize2);
+    @include font-size($headingSize3);
   }
 }

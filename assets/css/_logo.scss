@@ -13,6 +13,7 @@
 .logo {
   @include media(max-width $breakTablet) {
     margin: 0 auto;
+    @include font-size(13px);
   }
   &:focus,
   &:active {
