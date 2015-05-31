@@ -31,6 +31,25 @@
     }
   },
   "projects": {
+    "workspace-initiator": {
+      "owner": "frdmn",
+      "name": "workspace-initiator",
+      "alias": "workspace-initiator",
+      "screenshot-format": "pullup",
+      "category": "Script, WIP",
+      "date": "2015-05-26",
+      "description": "A simple command line utility to quickly initialize developer workspaces / repositories",
+      "github": "https://github.com/frdmn/workspace-initiator",
+      "additional": {
+        "information": "A simple NodeJS based command line utility to quickly initialize a developer workspace / git repository including README templates and license files.",
+        "license": "MIT",
+        "libraries": [
+          {
+            "name": "NodeJS"
+          }
+        ]
+      }
+    },
     "docker-cloudbot": {
       "owner": "frdmn",
       "name": "docker-cloudbot",
