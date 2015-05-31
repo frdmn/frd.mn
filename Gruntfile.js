@@ -205,7 +205,6 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', ['sass:build', 'autoprefixer', 'concat', 'uglify', 'grunticon', 'phplint']);
-    grunt.registerTask('imagemin', ['imagemin']);
     grunt.registerTask('dev', ['connect', 'watch', 'notify']);
     grunt.registerTask('dev:sync', ['browser_sync', 'watch', 'notify']);
     grunt.registerTask('parse', ['shell:parse']);
