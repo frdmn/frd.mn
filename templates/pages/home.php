@@ -12,17 +12,17 @@
       <nav>
         <ul class="nav nav--spaced">
           <li>
-            <a class="button button-- button--pill button--fade-left" href="<?= $data['info']['contact']['blog']['link']; ?>">
+            <a class="button button--pill button--fade-left" href="<?= $data['info']['contact']['blog']['link']; ?>">
               <?= $data['info']['contact']['blog']['title']; ?>
             </a>
           </li>
           <li>
-            <a class="button button-- button--pill" href="<?= $data['info']['contact']['twitter']['link']; ?>">
+            <a class="button button--pill" href="<?= $data['info']['contact']['twitter']['link']; ?>">
               <?= $data['info']['contact']['twitter']['title']; ?>
             </a>
           </li>
           <li>
-            <a class="tooltip button button-- button--pill button--fade-right" href="<?= $data['info']['contact']['mail']['link']; ?>">
+            <a class="tooltip button button--pill button--fade-right" href="<?= $data['info']['contact']['mail']['link']; ?>">
               <?= $data['info']['contact']['mail']['title']; ?>
               <span class="tooltip__content">
                 <span class="fake-link fake-link--block open-gpg">Do&nbsp;you&nbsp;even&nbsp;GPG?</span>
