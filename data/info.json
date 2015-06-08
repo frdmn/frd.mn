@@ -28,7 +28,7 @@
       "owner": "frdmn",
       "name": "init.js",
       "alias": "init.js",
-      "screenshot-format": "pullup",
+      "screenshot-format": "regular",
       "category": "Script, WIP",
       "date": "2015-05-26",
       "description": "A simple command line utility to quickly initialize developer workspaces / repositories",
