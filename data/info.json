@@ -81,6 +81,31 @@
         ]
       }
     },
+    "grunt-anybar": {
+      "owner": "frdmn",
+      "name": "grunt-anybar",
+      "alias": "grunt-anybar",
+      "screenshot-format": "pullup",
+      "category": "NodeJS, Grunt",
+      "date": "2015-04-15",
+      "description": "Display your Grunt build status right in your OS X menu bar",
+      "github": "https://github.com/frdmn/grunt-anybar",
+      "additional": {
+        "information": "Grunt plugin to show the current build status of Grunt in the AnyBar menu app.\n\nAvailable via npm: https://www.npmjs.com/package/grunt-anybar",
+        "license": "MIT",
+        "libraries": [
+          {
+            "name": "NodeJS"
+          }
+        ],
+        "dependencies": [
+          {
+            "name": "AnyBar",
+            "link": "https://github.com/tonsky/AnyBar"
+          }
+        ]
+      }
+    },
     "dnsbl-webutils": {
       "owner": "frdmn",
       "name": "dnsbl-webutils",
