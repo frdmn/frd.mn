@@ -51,6 +51,31 @@
         ]
       }
     },
+    "telegram-WhatToEatBot": {
+      "owner": "frdmn",
+      "name": "telegram-WhatToEatBot",
+      "alias": "telegram-WhatToEatBot",
+      "screenshot-format": "pullup",
+      "category": "NodeJS",
+      "date": "2015-06-30",
+      "description": "Dead simple NodeJS based Telegram bot for random dinner suggestions",
+      "github": "https://github.com/frdmn/telegram-WhatToEatBot",
+      "additional": {
+        "information": "No idea what to eat? Just type `/dinner` and let this bot suggest what you should eat today. The Telegram bot is written in NodeJS and uses the new [Bot API](https://core.telegram.org/bots/api)\n\n[Check out the bot in action](https://telegram.me/WhatToEatBot)!",
+        "license": "MIT",
+        "libraries": [
+          {
+            "name": "NodeJS"
+          }
+        ],
+        "dependencies": [
+          {
+            "name": "Telegram",
+            "link": "https://telegram.org"
+          }
+        ]
+      }
+    },
     "init.js": {
       "owner": "frdmn",
       "name": "init.js",
