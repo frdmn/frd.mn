@@ -66,7 +66,7 @@
           </a>
         </div><!--
      --><div class="grid__item<?= (isset($alias) ? ' width--0 width-tab--1of4' : ' width--0') ?> text--center text-tab--right">
-          <?= ($alias ? '<a href="mailto:j@frd.mn">Contact</a>' : '') ?>
+          <?= (isset($alias) && $alias ? '<a href="mailto:j@frd.mn">Contact</a>' : '') ?>
         </div>
       </div>
     </div>
