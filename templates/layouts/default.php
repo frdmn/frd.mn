@@ -49,7 +49,7 @@
   <script>try{Typekit.load();}catch(e){}</script>
 
   <!-- Modernizr -->
-  <script src="assets/js/modernizr.js"></script>
+  <script defer src="assets/js/modernizr.js"></script>
 </head>
 <body>
   <header class="site-header space--bottom space-lap--bottom-double space-desk-wide--bottom-triple">
@@ -92,7 +92,7 @@
     Mail: <a href="mailto:j@frd.mn">j@frd.mn</a></p>
   </div>
 
-  <script src="assets/js/build.js"></script>
+  <script defer src="assets/js/build.js"></script>
 
   <!-- Google Analytics -->
   <script>
