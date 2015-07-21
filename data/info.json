@@ -81,7 +81,7 @@
       "name": "init.js",
       "alias": "init.js",
       "screenshot-format": "regular",
-      "category": "Script, WIP",
+      "category": "NodeJS, Script",
       "date": "2015-05-26",
       "description": "A simple command line utility to quickly initialize developer workspaces / repositories",
       "github": "https://github.com/frdmn/init.js",
