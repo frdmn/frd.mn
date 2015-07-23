@@ -190,7 +190,7 @@ module.exports = function(grunt) {
                 stderr: true
             },
             parse: {
-                command: 'php parser.php > data/github.json'
+                command: 'php parser.php > data/github.json.new && mv data/github.json.new data/github.json'
             }
         },
 
