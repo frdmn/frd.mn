@@ -43,7 +43,6 @@
   </script>
   <noscript><link href="assets/icons/grunticon/icons.fallback.css" rel="stylesheet"></noscript>
 
-
   <!-- Typekit -->
   <script src="//use.typekit.net/tnj2plm.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
