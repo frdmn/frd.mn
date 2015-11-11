@@ -62,6 +62,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
+                    '<%= dirs.bower %>/picturefill/dist/picturefill.js',
                     '<%= dirs.bower %>/jquery/dist/jquery.js',
                     '<%= dirs.js %>/modal.js',
                     '<%= dirs.js %>/main.js',

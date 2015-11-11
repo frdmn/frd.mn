@@ -19,5 +19,6 @@
   "dependencies": {
     "basicss": "~0.1.5",
     "jquery": "1.11",
+    "picturefill": "~3.0.1"
   }
 }
