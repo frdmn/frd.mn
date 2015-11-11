@@ -66,7 +66,10 @@
           $img = getimagesize($data['meta']['dir'].'/assets/images/project/'.$alias.'.png');
           ?>
 
-          <img class="project-image <?= ($data['projects'][$alias]['screenshot-format']) ? 'project-image--'.$data['projects'][$alias]['screenshot-format'] : '' ?>" src="assets/images/project/<?= $alias; ?>.png" alt="Project: <?= $data['projects'][$alias]['name']; ?>" width="<?= $img[0]/2 ?>" height="<?= $img[1]/2 ?>"/>
+          <picture>
+             <source media="(min-width: 1024px)" srcset=" assets/images/project/responsive/@1x/<?= $alias; ?>.png, assets/images/project/responsive/@2x/<?= $alias; ?>.png 2x">
+             <img class="project-image <?= ($data['projects'][$alias]['screenshot-format']) ? 'project-image--'.$data['projects'][$alias]['screenshot-format'] : '' ?>" srcset="assets/images/project/responsive/@1x/<?= $alias; ?>.png" alt="Project: <?= $data['projects'][$alias]['name']; ?>" width="<?= $img[0]/2 ?>" height="<?= $img[1]/2 ?>" />
+          </picture>
         </div>
       <?php endif; ?>
 
