@@ -20,7 +20,7 @@
     "grunt-htmlhint": "~0.4.0",
     "grunt-notify": "^0.4.1",
     "grunt-phplint": "0.0.5",
-    "grunt-sass": "^1.1.0-beta",
+    "grunt-sass": "^1.1.0",
     "grunt-shell": "^1.1.2",
     "load-grunt-tasks": "^3.3.0"
   }
