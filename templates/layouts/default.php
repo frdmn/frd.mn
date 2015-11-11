@@ -43,7 +43,6 @@
   </script>
   <noscript><link href="assets/icons/grunticon/icons.fallback.css" rel="stylesheet"></noscript>
 
-
   <!-- Typekit -->
   <script>
     (function(d) {
