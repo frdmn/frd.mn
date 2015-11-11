@@ -21,6 +21,7 @@
     "grunt-modernizr": "^1.0.1",
     "grunt-notify": "^0.4.1",
     "grunt-phplint": "0.0.5",
+    "grunt-responsive-images": "^0.1.7",
     "grunt-sass": "^1.1.0",
     "grunt-shell": "^1.1.2",
     "load-grunt-tasks": "^3.3.0"

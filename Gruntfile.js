@@ -133,6 +133,27 @@ module.exports = function(grunt) {
             }
         },
 
+        // Responsive images
+        responsive_images: {
+          myTask: {
+            options: {
+              engine: 'im',
+              sizes: [{
+                name: '@2x',
+                width: '100%'
+              },{
+                name: '@1x',
+                width: '50%'
+              }]
+            },
+            files: [{
+              expand: true,
+              src: ['<%= dirs.images %>/project/*.{jpg,gif,png}'],
+              custom_dest: '<%= dirs.images %>/project/responsive/{%= name %}/'
+            }]
+          }
+        },
+
         // modernizr
         modernizr: {
             dist: {
