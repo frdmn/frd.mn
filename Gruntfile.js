@@ -96,8 +96,7 @@ module.exports = function(grunt) {
         uglify: {
             all: {
                 files: {
-                    '<%= dirs.js %>/build.js': ['<%= dirs.js %>/build.js'],
-                    '<%= dirs.js %>/modernizr.js': ['<%= dirs.bower %>/modernizr/modernizr.js']
+                    '<%= dirs.js %>/build.js': ['<%= dirs.js %>/build.js']
                 }
             }
         },
@@ -130,6 +129,20 @@ module.exports = function(grunt) {
                       "waves": [".headline--wavy:after",".site-footer:before"]
                     }
                 }
+            }
+        },
+
+        // modernizr
+        modernizr: {
+            dist: {
+
+                // Path to save out the built file
+                dest: '<%= dirs.js %>/modernizr.js',
+                crawl : false,
+                uglify: true,
+                options : [
+                    "html5shiv"
+                ],
             }
         },
 
@@ -204,7 +217,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', ['sass:build', 'autoprefixer', 'concat', 'uglify', 'grunticon', 'phplint']);
+    grunt.registerTask('default', ['sass:build', 'autoprefixer', 'concat', 'uglify', 'grunticon', 'phplint', 'modernizr']);
     grunt.registerTask('dev', ['connect', 'watch', 'notify']);
     grunt.registerTask('dev:sync', ['browser_sync', 'watch', 'notify']);
     grunt.registerTask('parse', ['shell:parse']);
