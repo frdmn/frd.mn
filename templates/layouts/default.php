@@ -56,7 +56,9 @@
   </script>
 
   <!-- Modernizr -->
-  <script defer src="assets/js/modernizr.js"></script>
+  <!--[if lt IE 9]>
+      <script src="assets/js/modernizr.js"></script>
+  <![endif]-->
 </head>
 <body>
   <!--[if lt IE 9]>
