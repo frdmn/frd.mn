@@ -56,9 +56,14 @@
   </script>
 
   <!-- Modernizr -->
-  <script defer src="assets/js/modernizr.js"></script>
+  <!--[if lt IE 9]>
+      <script src="assets/js/modernizr.js"></script>
+  <![endif]-->
 </head>
 <body>
+  <!--[if lt IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
   <header class="site-header space--bottom space-lap--bottom-double space-desk-wide--bottom-triple">
     <div class="constrain constrain--max text--center text-tab--left">
       <div class="grid">

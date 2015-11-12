@@ -9,10 +9,12 @@
   -webkit-font-smoothing: antialiased;
   color: $colorSheetBackgroundBase;
   a {
+    color: lighten($colorSiteHeader, 20%);
     color: rgba($colorSheetBackgroundBase, .3);
     transition: .3s;
     &:hover {
       text-decoration: none;
+      color: lighten($colorSiteHeader, 30%);
       color: rgba($colorSheetBackgroundBase, .6);
     }
   }

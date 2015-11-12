@@ -1,0 +1,6 @@
+.browserupgrade {
+  @include font-size($headingSize3);
+  padding: $baseUnit;
+  margin-bottom: 0;
+  background: $colorSheetBackgroundBase;
+}
