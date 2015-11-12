@@ -11,6 +11,7 @@
   }
   &__label {
     @include font-size(14px);
+    font-weight: bold;
     display: inline-block;
     position: relative;
     &:after {
@@ -29,7 +30,7 @@
 
 .labeled-text-hero {
   position: relative;
-
+  font-weight: bold;
   &__label {
     @include font-size(12px, false);
     line-height: 1.5;
