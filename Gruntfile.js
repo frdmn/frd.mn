@@ -62,6 +62,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
+                    '<%= dirs.bower %>/picturefill/dist/picturefill.js',
                     '<%= dirs.bower %>/jquery/dist/jquery.js',
                     '<%= dirs.js %>/modal.js',
                     '<%= dirs.js %>/main.js',
@@ -96,8 +97,7 @@ module.exports = function(grunt) {
         uglify: {
             all: {
                 files: {
-                    '<%= dirs.js %>/build.js': ['<%= dirs.js %>/build.js'],
-                    '<%= dirs.js %>/modernizr.js': ['<%= dirs.bower %>/modernizr/modernizr.js']
+                    '<%= dirs.js %>/build.js': ['<%= dirs.js %>/build.js']
                 }
             }
         },
@@ -130,6 +130,41 @@ module.exports = function(grunt) {
                       "waves": [".headline--wavy:after",".site-footer:before"]
                     }
                 }
+            }
+        },
+
+        // Responsive images
+        responsive_images: {
+          myTask: {
+            options: {
+              engine: 'im',
+              sizes: [{
+                name: '@2x',
+                width: '100%'
+              },{
+                name: '@1x',
+                width: '50%'
+              }]
+            },
+            files: [{
+              expand: true,
+              src: ['<%= dirs.images %>/project/*.{jpg,gif,png}'],
+              custom_dest: '<%= dirs.images %>/project/responsive/{%= name %}/'
+            }]
+          }
+        },
+
+        // modernizr
+        modernizr: {
+            dist: {
+
+                // Path to save out the built file
+                dest: '<%= dirs.js %>/modernizr.js',
+                crawl : false,
+                uglify: true,
+                options : [
+                    "html5shiv"
+                ],
             }
         },
 
@@ -204,7 +239,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', ['sass:build', 'autoprefixer', 'concat', 'uglify', 'grunticon', 'phplint']);
+    grunt.registerTask('default', ['sass:build', 'autoprefixer', 'concat', 'uglify', 'grunticon', 'phplint', 'modernizr']);
     grunt.registerTask('dev', ['connect', 'watch', 'notify']);
     grunt.registerTask('dev:sync', ['browser_sync', 'watch', 'notify']);
     grunt.registerTask('parse', ['shell:parse']);

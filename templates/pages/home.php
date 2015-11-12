@@ -1,6 +1,10 @@
 <?php $this->layout('layouts/default', compact('data', 'alias')) ?>
   <div class="constrain constrain--medium constrain--hero-frontpage text--center">
-    <img class="rounded-image space--bottom-double" src="assets/images/jonas.jpg" width="180" height="180" alt="Jonas Friedmann" />
+
+    <picture>
+       <source srcset="assets/images/jonas@1x.jpg, assets/images/jonas@2x.jpg 2x">
+       <img class="rounded-image space--bottom-double" src="assets/images/jonas@1x.jpg" width="180" height="180" alt="Jonas Friedmann" />
+    </picture>
 
     <div class="fading-seperator fading-seperator--center">
       <h1 class="headline headline--upper heading-2 space--bottom"><?= $data['info']['about']['name']; ?></h1>
