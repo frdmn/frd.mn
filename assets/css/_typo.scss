@@ -1,7 +1,7 @@
 .text--hero {
-  @include font-size(24px);
+  @include font-size(24px, false);
   @include media(max-width $breakLaptop) {
-    @include font-size(18px);
+    @include font-size(18px, false);
   }
   line-height: 1.25;
   color: #dbdad8;
