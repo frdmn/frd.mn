@@ -16,12 +16,13 @@ Repository of my personal website / project portfolio.
   `npm install`  
   `bower install`  
   `composer install`
-4. Run Grunt task:  
-  `grunt`
-5. Copy the default `.env` and insert your GitHub API token:  
+4. Copy the default `.env` and insert your GitHub API token:  
   `cp .env.default .env`
-6. And update the `github.json` initially:  
-  `grunt parse`
+5. Run Grunt task:  
+  `grunt`  
+  `grunt parse`  
+  `grunt responsive_images`  
+  `grunt imagemin`  
 
 ## Usage
 
@@ -51,7 +52,7 @@ location / {
 
 ## Credits
 
-* Marian Friedmann ([rnarian](https://github.com/rnarian)) 
+* Marian Friedmann ([rnarian](https://github.com/rnarian))
 
 ## Version
 
