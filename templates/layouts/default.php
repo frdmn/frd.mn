@@ -16,6 +16,11 @@
   <meta name="description" content="<?= $description ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <meta property="og:url"         content="http://<?= $data['info']['about']['url'] ?>">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="<?= $title ?>">
+  <meta property="og:description" content="<?= $description ?>">
+  <meta property="og:image"       content="http://<?= $data['info']['about']['url'] ?>/assets/images/screenshot.png">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Fav- & Apple-Touch-Icons -->
