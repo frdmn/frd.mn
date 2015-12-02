@@ -21,6 +21,10 @@
   <meta property="og:title"       content="<?= $title ?>">
   <meta property="og:description" content="<?= $description ?>">
   <meta property="og:image"       content="http://<?= $data['info']['about']['url'] ?>/assets/images/screenshot.png">
+  <meta name="twitter:card"    content="summary">
+  <meta name="twitter:site"    content="<?= $data['info']['contact']['twitter']['title']; ?>">
+  <meta name="twitter:creator" content="<?= $data['info']['contact']['twitter']['title']; ?>">
+
   <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Fav- & Apple-Touch-Icons -->
