@@ -4,10 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title><?= isset($alias) ? $alias.' &middot; ' : '' ?><?= $data['info']['about']['name']; ?> &middot; <?= $data['info']['about']['city']; ?></title>
+  <?php
+    $title = (isset($alias) ? $alias.' &middot; ' : '') .  $data['info']['about']['name'] . ' &middot; ' . $data['info']['about']['city']; ?>
 
-  <meta name="description" content="<?= isset($alias) ? $data['projects'][$alias]['description'] : $data['info']['about']['bio']; ?>">
+  <?php
+    $description = isset($alias) ? $data['projects'][$alias]['description'] : $data['info']['about']['bio'];
+  ?>
+
+  <title><?= $title ?></title>
+
+  <meta name="description" content="<?= $description ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:url"         content="http://<?= $data['info']['about']['url'] ?>">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="<?= $title ?>">
+  <meta property="og:description" content="<?= $description ?>">
+  <meta property="og:image"       content="http://<?= $data['info']['about']['url'] ?>/assets/images/screenshot.png">
+  <meta name="twitter:card"    content="summary">
+  <meta name="twitter:site"    content="<?= $data['info']['contact']['twitter']['title']; ?>">
+  <meta name="twitter:creator" content="<?= $data['info']['contact']['twitter']['title']; ?>">
 
   <link rel="stylesheet" href="assets/css/style.css">
 
