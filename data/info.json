@@ -431,7 +431,7 @@
       "description": "Alfred workflow to search for phone numbersthrough LDAP",
       "github": "https://github.com/frdmn/alfred-ldap",
       "additional": {
-        "information": "Alfred workflow to search for telephone numbers of coworkers through an Active Directory/LDAP directory.\n\nYou might also want to checkout the sister workflow: [alfred-ciscocal](http://frd.mn/alfred-ciscocal)",
+        "information": "Alfred workflow to search for telephone numbers of coworkers through an Active Directory/LDAP directory.\n\nYou might also want to checkout the sister workflow: [alfred-ciscocall](http://frd.mn/alfred-ciscocall)",
         "license": "WTFPL",
         "dependencies": [
           {
