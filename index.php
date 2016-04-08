@@ -9,7 +9,7 @@
    */
 
   function returnFullURL(){
-    return ((empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') ? 'http://' : 'https://').$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != 80 ? ':'.$_SERVER['SERVER_PORT'] : '') . dirname($_SERVER['REQUEST_URI']);
+    return 'https://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != 80 ? ':'.$_SERVER['SERVER_PORT'] : '') . dirname($_SERVER['REQUEST_URI']);
   }
 
   /**
