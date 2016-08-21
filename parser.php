@@ -55,4 +55,3 @@
   if (isset($_GET['dump'])) {
     var_dump($repositories);
   }
-?>
