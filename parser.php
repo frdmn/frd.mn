@@ -55,3 +55,6 @@
   if (isset($_GET['dump'])) {
     var_dump($repositories);
   }
+
+  // Exit without status code
+  exit(0);
