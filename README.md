@@ -18,7 +18,7 @@ Repository of my personal website / project portfolio.
   `composer install`
 4. Copy the default `.env` and insert your GitHub API token:  
   `cp .env.default .env`
-5. Run Grunt task:  
+5. Run Grunt tasks:  
   `grunt`  
   `grunt parse`  
   `grunt responsive_images`  
