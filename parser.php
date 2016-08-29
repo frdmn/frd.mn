@@ -27,6 +27,26 @@
   // Authenticate using API token in .env
   $client->authenticate(getenv('GITHUB_API_TOKEN'), null, Github\Client::AUTH_HTTP_TOKEN);
 
+  // I often forget to add a project, so passing "list" as argument
+  // to this script, will only generate a list of all existing GitHub
+  // repositories as well as associate them with their creation date
+  // so you can see which ones you've forget to add here recently
+  if (@$argv[1] === 'list') {
+    // We need to create a pagniation to parse more than 30 repositories
+    $repositoryApi = $client->api('user');
+    $paginator = new Github\ResultPager($client);
+    $repositories = $paginator->fetchAll($repositoryApi, 'repositories', array('frdmn'));
+
+    // Iterate through repositories
+    foreach ($repositories as $project) {
+      $forkString = ($project['fork'] ? '(F) ' : '');
+      echo $project['created_at'].' '.$forkString.$project['name']."\n";
+    }
+
+    // Exit without status code
+    exit(0);
+  }
+
   foreach ($info_json['projects'] as $name => $project) {
     $repository = $client->api('repo')->show($project['owner'], $project['alias']);
 
