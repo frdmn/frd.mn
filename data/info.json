@@ -34,7 +34,7 @@
       "description": "Download any images or videos from public Twitter timelines",
       "github": "https://github.com/frdmn/twitgrab",
       "additional": {
-        "information": "Download (or scrape) any media files (images and movies) from someones Twitter page without any API usage.",
+        "information": "Simple command line tool to download (actually \"scrape\" since it doesn't use any authentication or APIs) images and movies from someones public Twitter feed.",
         "license": "MIT",
         "libraries": [
           {
