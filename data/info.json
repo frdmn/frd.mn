@@ -53,7 +53,7 @@
       "description": "Add a Snapchat overlay without using Snapchat",
       "github": "https://github.com/frdmn/snapchat-mimic",
       "additional": {
-        "information": "Add a Snapchat overflay to movies without using Snapchat, just using `ffmpeg` and Bash.",
+        "information": "Add a fake Snapchat overlay to existing video files without using the official Snapchat app, just with the help of `ffmpeg` and bash.",
         "license": "MIT",
         "libraries": [
           {
