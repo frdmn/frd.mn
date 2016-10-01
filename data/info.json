@@ -72,7 +72,7 @@
       "description": "Alfred workflow to upload image files to Imgur",
       "github": "https://github.com/frdmn/alfred-imgur",
       "additional": {
-        "information": "Alfred workflow to upload image files from your Finder to [Imgur](https://imgur.com).",
+        "information": "Basic Alfred workflow (written in AppleScript) to upload image files directly from your Finder to [Imgur](https://imgur.com).",
         "license": "MIT",
         "dependencies": [
           {
