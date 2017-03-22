@@ -113,10 +113,7 @@
   </div>
   <div id="legal-content" class="modal-content">
     <h6 class="headline headline--upper heading-4">Legal Disclosure</h6>
-    <p>Information in accordance with section 5 TMG</p>
-
-    <p>Jonas Friedmann<br>Barbarastraße 18<br>97074 Würzburg</p>
-    <p>Phone: +49 171 4494499<br>
+    <p>Jonas Friedmann<br>
     Mail: <a href="mailto:j@frd.mn">j@frd.mn</a></p>
   </div>
 
