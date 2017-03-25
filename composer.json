@@ -1,9 +1,10 @@
 {
     "require": {
-        "knplabs/github-api": "~1.2",
+        "knplabs/github-api": "^1.7",
         "vlucas/phpdotenv": "~1.1",
         "cebe/markdown": "~1.1",
         "league/plates": "~3.1",
-        "klein/klein": "~2.1"
+        "klein/klein": "~2.1",
+        "php-http/guzzle6-adapter": "^1.1"
     }
 }
